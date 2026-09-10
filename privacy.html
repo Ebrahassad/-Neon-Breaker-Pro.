@@ -1,54 +1,399 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Neon Breaker Pro</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #080911;
-            color: #E0E0E0;
-            line-height: 1.6;
-            padding: 30px;
-            max-width: 800px;
-            margin: auto;
-        }
-        h1, h2 { color: #05D5E8; }
-        a { color: #00F5D4; }
-        .container {
-            background-color: #121424;
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid #1E2238;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050014">
+<meta name="description" content="سياسة الخصوصية لتطبيق Neon Breaker Pro">
+<title>Neon Breaker Pro — Privacy Policy</title>
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;
+ font-family:Arial,Helvetica,sans-serif;
+ background:#050014;
+ color:#fff;
+ line-height:1.8;
+}
+body:before{
+ content:"";
+ position:fixed;
+ inset:0;
+ pointer-events:none;
+ z-index:-2;
+ background:
+ radial-gradient(circle at 15% 15%,rgba(0,255,255,.12),transparent 30%),
+ radial-gradient(circle at 85% 75%,rgba(255,0,170,.12),transparent 30%);
+}
+.grid{
+ position:fixed;
+ inset:0;
+ z-index:-1;
+ opacity:.35;
+ background-image:
+ linear-gradient(rgba(0,255,255,.035) 1px,transparent 1px),
+ linear-gradient(90deg,rgba(0,255,255,.035) 1px,transparent 1px);
+ background-size:45px 45px;
+}
+
+nav{
+ position:sticky;
+ top:0;
+ z-index:10;
+ padding:15px 5%;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ background:rgba(5,0,20,.85);
+ backdrop-filter:blur(14px);
+ border-bottom:1px solid rgba(0,255,255,.15);
+}
+.logo{
+ font-weight:900;
+ color:#fff;
+ text-shadow:0 0 12px #00ffff;
+}
+button{
+ border:1px solid #00ffff;
+ background:rgba(0,255,255,.08);
+ color:#00ffff;
+ padding:8px 16px;
+ border-radius:20px;
+ cursor:pointer;
+ font-weight:bold;
+}
+
+main{
+ max-width:950px;
+ margin:auto;
+ padding:70px 20px 100px;
+}
+.hero{text-align:center;margin-bottom:55px}
+.icon{
+ width:90px;
+ height:90px;
+ margin:auto auto 20px;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ border:2px solid #00ffff;
+ border-radius:24px;
+ font-size:40px;
+ box-shadow:0 0 25px rgba(0,255,255,.45);
+}
+h1{
+ font-size:clamp(34px,7vw,58px);
+ margin:0;
+ background:linear-gradient(90deg,#00ffff,#fff,#ff19b8);
+ -webkit-background-clip:text;
+ color:transparent;
+}
+.updated{color:#858197}
+.card{
+ margin:22px 0;
+ padding:25px;
+ border-radius:20px;
+ border:1px solid rgba(0,255,255,.18);
+ background:linear-gradient(145deg,rgba(17,0,50,.82),rgba(5,0,20,.88));
+ box-shadow:0 0 25px rgba(0,255,255,.05);
+}
+h2{
+ color:#00ffff;
+ margin-top:0;
+ font-size:25px;
+}
+h3{color:#ff4ac4}
+p,li{color:#c5c2d2}
+ul{padding-right:25px}
+body.english{direction:ltr}
+body.english ul{padding-right:0;padding-left:25px}
+.en{display:none}
+body.english .ar{display:none}
+body.english .en{display:block}
+a{color:#00ffff}
+footer{
+ text-align:center;
+ padding:35px 20px;
+ border-top:1px solid rgba(0,255,255,.12);
+ color:#777487;
+}
+@media(max-width:600px){
+ main{padding:50px 15px 80px}
+ .card{padding:20px}
+}
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Privacy Policy for Neon Breaker Pro</h1>
-        <p>Last updated: August 2026</p>
+<div class="grid"></div>
 
-        <p>Neon Breaker Pro ("we", "our", or "us") operates the Neon Breaker Pro mobile application. This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our App.</p>
+<nav>
+ <div class="logo">⚡ NEON BREAKER PRO</div>
+ <button onclick="toggleLanguage()" id="langBtn">English</button>
+</nav>
 
-        <h2>1. Information Collection and Use</h2>
-        <p>Neon Breaker Pro does not directly collect or store personal identifying information such as names, emails, or phone numbers. Game progress, high scores, and coins are saved locally on your device.</p>
+<main>
 
-        <h2>2. Third-Party Advertising (Unity Ads)</h2>
-        <p>Our app integrates <strong>Unity Ads</strong> to serve advertisements. Unity Ads may collect certain non-personal device information to optimize ad delivery, such as:</p>
-        <ul>
-            <li>Device IP address and hardware identifiers.</li>
-            <li>Ad interaction data and performance metrics.</li>
-        </ul>
-        <p>For more details on Unity Ads privacy compliance, visit: <a href="https://unity.com/legal/privacy-policy" target="_blank">Unity Privacy Policy</a>.</p>
+<div class="hero">
+ <div class="icon">🧱</div>
 
-        <h2>3. Children's Privacy</h2>
-        <p>Our app is not primarily targeted at children under the age of 13. We do not knowingly collect personal information from children.</p>
+ <h1>Privacy Policy</h1>
 
-        <h2>4. Contact Us</h2>
-        <p>If you have any questions regarding this privacy policy, please contact us via email.</p>
-        
-        <p><a href="index.html">← Back to Home Page</a></p>
-    </div>
+ <p class="ar">
+  سياسة الخصوصية — Neon Breaker Pro
+ </p>
+
+ <p class="en">
+  Privacy Policy — Neon Breaker Pro
+ </p>
+
+ <p class="updated">
+  <span class="ar">آخر تحديث: سبتمبر 2026</span>
+  <span class="en">Last updated: September 2026</span>
+ </p>
+</div>
+
+<div class="card">
+ <h2 class="ar">1. مقدمة</h2>
+ <h2 class="en">1. Introduction</h2>
+
+ <p class="ar">
+  نحن نحترم خصوصية مستخدمي Neon Breaker Pro. توضح هذه السياسة
+  كيفية تعامل التطبيق مع المعلومات والبيانات عند استخدام اللعبة.
+ </p>
+
+ <p class="en">
+  We respect the privacy of Neon Breaker Pro users. This policy
+  explains how information and data may be handled when you use the game.
+ </p>
+</div>
+
+<div class="card">
+ <h2 class="ar">2. المعلومات التي يجمعها التطبيق</h2>
+ <h2 class="en">2. Information We Collect</h2>
+
+ <p class="ar">
+  اللعبة نفسها لا تطلب منك إنشاء حساب مستخدم ولا تطلب منك إدخال
+  اسم أو عنوان أو رقم هاتف أو معلومات شخصية مباشرة من أجل لعب اللعبة.
+ </p>
+
+ <p class="en">
+  The game does not require you to create a user account and does not
+  directly ask you to provide your name, address, phone number, or similar
+  personal information in order to play.
+ </p>
+
+ <p class="ar">
+  ومع ذلك، قد تستخدم خدمات خارجية مدمجة في التطبيق، مثل خدمات الإعلانات،
+  وقد تقوم هذه الخدمات بمعالجة بعض المعلومات التقنية وفق سياساتها الخاصة.
+ </p>
+
+ <p class="en">
+  However, the app may use integrated third-party services, such as
+  advertising services, which may process certain technical information
+  according to their own privacy policies.
+ </p>
+</div>
+
+<div class="card">
+ <h2 class="ar">3. Unity Ads والإعلانات</h2>
+ <h2 class="en">3. Unity Ads and Advertising</h2>
+
+ <p class="ar">
+  يستخدم Neon Breaker Pro خدمة Unity Ads لعرض الإعلانات داخل اللعبة.
+  قد تتضمن الإعلانات إعلانات عادية وإعلانات مكافئة تمنح اللاعب فرصة
+  إضافية أو مكافأة داخل اللعبة عند مشاهدة الإعلان واستيفاء شروطه.
+ </p>
+
+ <p class="en">
+  Neon Breaker Pro uses Unity Ads to display advertisements within the game.
+  These may include regular advertisements and rewarded advertisements
+  that can provide an additional gameplay opportunity or in-game reward
+  when the advertisement is viewed and its conditions are satisfied.
+ </p>
+
+ <h3 class="ar">ما الذي قد تعالجه Unity؟</h3>
+ <h3 class="en">What may Unity process?</h3>
+
+ <p class="ar">
+  قد تقوم Unity، بحسب إعدادات الجهاز والمنطقة وطريقة تقديم الإعلانات،
+  بمعالجة معلومات تقنية مثل معلومات الجهاز، معرفات الإعلانات، معلومات
+  الشبكة، بيانات الاستخدام والتفاعل مع الإعلانات، ومعلومات ضرورية
+  لتقديم الإعلانات وقياس أدائها ومنع الاحتيال.
+ </p>
+
+ <p class="en">
+  Depending on device settings, region, and how advertising is delivered,
+  Unity may process technical information such as device information,
+  advertising identifiers, network information, usage and advertising
+  interaction data, and information needed to deliver ads, measure
+  advertising performance, and help prevent fraud.
+ </p>
+
+ <p class="ar">
+  قد تختلف طريقة معالجة البيانات والإعلانات المخصصة حسب البلد وإعدادات
+  الخصوصية والموافقة المتاحة على الجهاز.
+ </p>
+
+ <p class="en">
+  The way data and personalized advertising are handled may vary depending
+  on your country, privacy settings, and applicable consent choices.
+ </p>
+
+ <p>
+  <span class="ar">
+   لمزيد من المعلومات، يرجى مراجعة سياسة خصوصية Unity الرسمية:
+  </span>
+  <span class="en">
+   For more information, please review Unity's official privacy policy:
+  </span>
+  <br>
+  <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">
+   Unity Game Player and App User Privacy Policy
+  </a>
+ </p>
+</div>
+
+<div class="card">
+ <h2 class="ar">4. الإعلانات المكافئة</h2>
+ <h2 class="en">4. Rewarded Advertisements</h2>
+
+ <p class="ar">
+  قد يختار اللاعب مشاهدة إعلان مكافئ للحصول على مكافأة داخل اللعبة،
+  مثل فرصة إضافية لمواصلة اللعب. مشاهدة الإعلان اختيارية، ولا يتم
+  منح المكافأة إلا عند اكتمال شروط الإعلان بنجاح.
+ </p>
+
+ <p class="en">
+  Players may choose to watch a rewarded advertisement to receive an
+  in-game reward, such as an additional opportunity to continue playing.
+  Watching a rewarded advertisement is optional, and the reward is granted
+  only when the required advertising conditions are successfully completed.
+ </p>
+</div>
+
+<div class="card">
+ <h2 class="ar">5. خدمات الطرف الثالث</h2>
+ <h2 class="en">5. Third-Party Services</h2>
+
+ <p class="ar">
+  قد تعتمد اللعبة على خدمات خارجية لتوفير وظائف مثل الإعلانات.
+  تخضع هذه الخدمات لسياسات الخصوصية وشروط الاستخدام الخاصة بمقدميها.
+ </p>
+
+ <p class="en">
+  The game may rely on third-party services to provide features such as
+  advertising. These services are governed by the privacy policies and
+  terms of their respective providers.
+ </p>
+</div>
+
+<div class="card">
+ <h2 class="ar">6. أمن المعلومات</h2>
+ <h2 class="en">6. Data Security</h2>
+
+ <p class="ar">
+  نسعى إلى استخدام ممارسات مناسبة لحماية التطبيق وبياناته. ومع ذلك،
+  لا يمكن ضمان أمان أي عملية نقل أو تخزين للبيانات بنسبة 100%.
+ </p>
+
+ <p class="en">
+  We seek to use appropriate practices to protect the application and
+  its data. However, no method of transmission or storage can be
+  guaranteed to be 100% secure.
+ </p>
+</div>
+
+<div class="card">
+ <h2 class="ar">7. خصوصية الأطفال</h2>
+ <h2 class="en">7. Children's Privacy</h2>
+
+ <p class="ar">
+  لا نهدف إلى جمع معلومات شخصية مباشرة من الأطفال. إذا كنت تعتقد أن
+  معلومات شخصية تم تقديمها إلينا بشكل غير مقصود، يرجى التواصل معنا
+  لاتخاذ الإجراءات المناسبة.
+ </p>
+
+ <p class="en">
+  We do not intend to directly collect personal information from children.
+  If you believe personal information has been unintentionally provided,
+  please contact us so that appropriate action can be taken.
+ </p>
+</div>
+
+<div class="card">
+ <h2 class="ar">8. خيارات الخصوصية</h2>
+ <h2 class="en">8. Privacy Choices</h2>
+
+ <p class="ar">
+  يمكنك استخدام إعدادات الخصوصية والإعلانات في جهازك، حيثما كانت متاحة،
+  لإدارة بعض خيارات الإعلانات ومعرفات الإعلانات.
+ </p>
+
+ <p class="en">
+  Where available, you can use your device's privacy and advertising
+  settings to manage certain advertising and advertising-identifier choices.
+ </p>
+</div>
+
+<div class="card">
+ <h2 class="ar">9. التغييرات على سياسة الخصوصية</h2>
+ <h2 class="en">9. Changes to This Policy</h2>
+
+ <p class="ar">
+  قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سيتم نشر أي تغييرات
+  على هذه الصفحة مع تحديث تاريخ آخر تعديل.
+ </p>
+
+ <p class="en">
+  We may update this Privacy Policy from time to time. Any changes will
+  be published on this page together with an updated revision date.
+ </p>
+</div>
+
+<div class="card">
+ <h2 class="ar">10. التواصل</h2>
+ <h2 class="en">10. Contact</h2>
+
+ <p class="ar">
+  إذا كانت لديك أسئلة حول سياسة الخصوصية أو طريقة تعامل التطبيق مع
+  البيانات، يمكنك التواصل مع مطور التطبيق عبر صفحة المشروع الرسمية.
+ </p>
+
+ <p class="en">
+  If you have questions about this Privacy Policy or how the app handles
+  data, you may contact the developer through the official project page.
+ </p>
+
+ <p>
+  <a href="https://github.com/Ebrahassad/-Neon-Breaker-Pro.">
+   GitHub — Neon Breaker Pro
+  </a>
+ </p>
+</div>
+
+</main>
+
+<footer>
+ <span class="ar">Neon Breaker Pro © 2026 — Hassadi</span>
+ <span class="en">Neon Breaker Pro © 2026 — Hassadi</span>
+ <br><br>
+ <a href="index.html">
+  <span class="ar">العودة إلى الصفحة الرئيسية</span>
+  <span class="en">Back to Home</span>
+ </a>
+</footer>
+
+<script>
+function toggleLanguage(){
+ const english=document.body.classList.toggle("english");
+ document.documentElement.lang=english?"en":"ar";
+ document.documentElement.dir=english?"ltr":"rtl";
+ document.getElementById("langBtn").textContent=english?"العربية":"English";
+}
+</script>
+
 </body>
 </html>
