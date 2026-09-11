@@ -1,1073 +1,456 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html><html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050014">
+<meta name="description" content="سياسة الخصوصية لتطبيق Neon Breaker Pro">
+<title>Neon Breaker Pro — Privacy Policy</title><style>
+*{box-sizing:border-box}
 
-<meta
-  name="theme-color"
-  content="#020208"
->
+html{scroll-behavior:smooth}
 
-<meta
-  name="description"
-  content="سياسة الخصوصية لتطبيق Neon Breaker Pro"
->
-
-<title>Neon Breaker Pro — Privacy Policy</title>
-
-<style>
-/* =========================================================
-   NEON BREAKER PRO — PRIVACY POLICY
-   Unified website theme
-   ========================================================= */
-
-:root {
-  --cyan: #00ffff;
-  --cyan-bright: #39ecff;
-  --cyan-deep: #087fbe;
-  --pink: #ff19b8;
-  --purple: #8b5cff;
-  --bg: #020208;
-  --panel: rgba(7,3,18,.80);
-  --text: #ffffff;
-  --muted: #aaa7bc;
-  --border: rgba(0,255,255,.18);
+body{
+ margin:0;
+ font-family:Arial,Helvetica,sans-serif;
+ background:#020208;
+ color:#fff;
+ line-height:1.8;
 }
 
-/* ---------- RESET ---------- */
-
-* {
-  box-sizing: border-box;
+body:before{
+ content:"";
+ position:fixed;
+ inset:0;
+ pointer-events:none;
+ z-index:-2;
+ background:
+ radial-gradient(circle at 15% 15%,rgba(0,255,255,.12),transparent 30%),
+ radial-gradient(circle at 85% 75%,rgba(255,0,170,.12),transparent 30%);
 }
 
-html {
-  scroll-behavior: smooth;
+.grid{
+ position:fixed;
+ inset:0;
+ z-index:-1;
+ opacity:.35;
+ background-image:
+ linear-gradient(rgba(0,255,255,.035) 1px,transparent 1px),
+ linear-gradient(90deg,rgba(0,255,255,.035) 1px,transparent 1px);
+ background-size:45px 45px;
 }
 
-body {
-  margin: 0;
-  min-height: 100vh;
-  overflow-x: hidden;
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--text);
-  background: var(--bg);
-  line-height: 1.8;
+nav{
+ position:sticky;
+ top:0;
+ z-index:10;
+ padding:15px 5%;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ background:rgba(5,0,20,.85);
+ backdrop-filter:blur(14px);
+ border-bottom:1px solid rgba(0,255,255,.15);
 }
 
-/* ---------- BACKGROUND ---------- */
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -20;
-  pointer-events: none;
-
-  background:
-    radial-gradient(
-      ellipse 125% 115% at 50% 37%,
-      #1b0a35 0%,
-      #090417 48%,
-      #020208 100%
-    );
+.logo{
+ font-weight:900;
+ color:#fff;
+ text-shadow:0 0 12px #00ffff;
 }
 
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -19;
-  pointer-events: none;
-
-  background:
-    radial-gradient(
-      circle 180px at 10% 15%,
-      rgba(0,255,255,.06),
-      transparent 70%
-    ),
-    radial-gradient(
-      circle 170px at 90% 28%,
-      rgba(255,25,184,.06),
-      transparent 70%
-    ),
-    radial-gradient(
-      circle 230px at 50% 90%,
-      rgba(139,92,255,.045),
-      transparent 70%
-    );
+button{
+ border:1px solid #00ffff;
+ background:rgba(0,255,255,.08);
+ color:#00ffff;
+ padding:8px 16px;
+ border-radius:20px;
+ cursor:pointer;
+ font-weight:bold;
 }
 
-/* ---------- GRID ---------- */
-
-.neon-grid {
-  position: fixed;
-  inset: 0;
-  z-index: -18;
-  pointer-events: none;
-
-  opacity: .65;
-
-  background-image:
-    linear-gradient(
-      to right,
-      rgba(0,255,255,.025) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      to bottom,
-      rgba(0,255,255,.025) 1px,
-      transparent 1px
-    );
-
-  background-size: 44px 44px;
+main{
+ max-width:950px;
+ margin:auto;
+ padding:70px 20px 100px;
 }
 
-/* ---------- PARTICLES ---------- */
-
-.neon-particles {
-  position: fixed;
-  inset: 0;
-  z-index: -17;
-  pointer-events: none;
-
-  background:
-    radial-gradient(circle at 6% 8%, rgba(0,255,255,.75) 0 2px, transparent 3px),
-    radial-gradient(circle at 29% 10%, rgba(255,255,255,.45) 0 1.5px, transparent 2.5px),
-    radial-gradient(circle at 57% 8%, rgba(255,25,184,.65) 0 2px, transparent 3px),
-    radial-gradient(circle at 94% 9%, rgba(0,255,255,.65) 0 2px, transparent 3px),
-    radial-gradient(circle at 36% 19%, rgba(255,255,255,.45) 0 1.5px, transparent 2.5px),
-    radial-gradient(circle at 68% 25%, rgba(0,255,255,.65) 0 2px, transparent 3px),
-    radial-gradient(circle at 4% 35%, rgba(255,25,184,.65) 0 2px, transparent 3px),
-    radial-gradient(circle at 52% 34%, rgba(255,255,255,.45) 0 1.5px, transparent 2.5px),
-    radial-gradient(circle at 74% 39%, rgba(0,255,255,.65) 0 2px, transparent 3px),
-    radial-gradient(circle at 28% 45%, rgba(255,25,184,.65) 0 2px, transparent 3px),
-    radial-gradient(circle at 61% 50%, rgba(255,255,255,.45) 0 1.5px, transparent 2.5px),
-    radial-gradient(circle at 3% 54%, rgba(0,255,255,.65) 0 2px, transparent 3px),
-    radial-gradient(circle at 38% 58%, rgba(255,25,184,.65) 0 2px, transparent 3px),
-    radial-gradient(circle at 69% 62%, rgba(255,255,255,.45) 0 1.5px, transparent 2.5px),
-    radial-gradient(circle at 15% 78%, rgba(0,255,255,.65) 0 2px, transparent 3px),
-    radial-gradient(circle at 52% 76%, rgba(255,25,184,.65) 0 2px, transparent 3px),
-    radial-gradient(circle at 96% 83%, rgba(0,255,255,.65) 0 2px, transparent 3px),
-    radial-gradient(circle at 34% 86%, rgba(255,255,255,.45) 0 1.5px, transparent 2.5px),
-    radial-gradient(circle at 61% 96%, rgba(255,25,184,.65) 0 2px, transparent 3px),
-    radial-gradient(circle at 90% 95%, rgba(0,255,255,.65) 0 2px, transparent 3px);
+.hero{
+ text-align:center;
+ margin-bottom:55px;
 }
 
-/* ---------- DECORATION ---------- */
-
-.neon-decoration {
-  position: fixed;
-  inset: 0;
-  z-index: -16;
-  pointer-events: none;
+.icon{
+ width:100px;
+ height:100px;
+ margin:auto auto 20px;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ border:2px solid #00ffff;
+ border-radius:26px;
+ overflow:hidden;
+ background:linear-gradient(145deg,#13003b,#050014);
+ box-shadow:
+ 0 0 25px rgba(0,255,255,.45),
+ inset 0 0 20px rgba(255,0,170,.15);
 }
 
-.neon-brick {
-  position: absolute;
-  width: 25px;
-  height: 9px;
-  border-radius: 3px;
-  border: 1px solid currentColor;
-  opacity: .55;
+.icon img{
+ width:100%;
+ height:100%;
+ object-fit:contain;
+ display:block;
 }
 
-.neon-brick.cyan {
-  color: var(--cyan);
-  box-shadow: 0 0 12px rgba(0,255,255,.35);
+h1{
+ font-size:clamp(34px,7vw,58px);
+ margin:0;
+ background:linear-gradient(90deg,#00ffff,#fff,#ff19b8);
+ -webkit-background-clip:text;
+ background-clip:text;
+ color:transparent;
+ text-shadow:
+ 0 0 10px rgba(0,255,255,.18),
+ 0 0 25px rgba(255,25,184,.10);
 }
 
-.neon-brick.pink {
-  color: var(--pink);
-  box-shadow: 0 0 12px rgba(255,25,184,.35);
+.updated{
+ color:#858197;
 }
 
-.neon-ball {
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
+.card{
+ margin:22px 0;
+ padding:25px;
+ border-radius:20px;
+ border:1px solid rgba(0,255,255,.18);
+ background:
+ linear-gradient(
+ 145deg,
+ rgba(17,0,50,.82),
+ rgba(5,0,20,.88)
+ );
+ box-shadow:
+ 0 0 25px rgba(0,255,255,.05),
+ inset 0 0 25px rgba(255,0,170,.025);
 }
 
-.neon-ball.cyan {
-  background: var(--cyan);
-  box-shadow:
-    0 0 12px rgba(0,255,255,.75),
-    0 0 25px rgba(0,255,255,.3);
+h2{
+ color:#00ffff;
+ margin-top:0;
+ font-size:25px;
+ text-shadow:0 0 12px rgba(0,255,255,.25);
 }
 
-.neon-ball.pink {
-  background: var(--pink);
-  box-shadow:
-    0 0 12px rgba(255,25,184,.75),
-    0 0 25px rgba(255,25,184,.3);
+h3{
+ color:#ff4ac4;
 }
 
-/* ---------- NAVIGATION ---------- */
-
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-
-  padding: 14px 5%;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-
-  background: rgba(2,2,8,.84);
-  backdrop-filter: blur(14px);
-
-  border-bottom: 1px solid rgba(0,255,255,.15);
+p,li{
+ color:#c5c2d2;
 }
 
-.logo {
-  color: #fff;
-  font-size: 19px;
-  font-weight: 900;
-  letter-spacing: 1px;
-
-  text-shadow:
-    0 0 10px rgba(0,255,255,.65),
-    0 0 22px rgba(0,255,255,.25);
+ul{
+ padding-right:25px;
 }
 
-.nav-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+a{
+ color:#00ffff;
+ text-decoration:none;
+ transition:.2s ease;
 }
 
-.nav-btn {
-  min-height: 42px;
-  padding: 0 16px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 14px;
-
-  border: 1px solid rgba(0,255,255,.42);
-  background: rgba(0,255,255,.05);
-
-  color: #fff;
-  font-weight: 800;
-  text-decoration: none;
-
-  cursor: pointer;
-  transition: .2s ease;
+a:hover{
+ color:#fff;
+ text-shadow:0 0 10px #00ffff;
 }
 
-.nav-btn:hover {
-  color: var(--cyan);
-  border-color: var(--cyan);
-  background: rgba(0,255,255,.08);
-
-  box-shadow:
-    0 0 18px rgba(0,255,255,.18);
+.developer-card{
+ text-align:center;
 }
 
-/* ---------- MAIN ---------- */
-
-main {
-  position: relative;
-  width: min(950px,100%);
-  margin: auto;
-  padding: 75px 20px 100px;
+.developer-link{
+ display:inline-flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:center;
+ gap:12px;
+ margin-top:10px;
+ padding:18px 25px;
+ border:1px solid rgba(0,255,255,.25);
+ border-radius:20px;
+ background:rgba(0,255,255,.035);
+ transition:.25s ease;
 }
 
-/* ---------- HERO ---------- */
-
-.hero {
-  text-align: center;
-  margin-bottom: 55px;
+.developer-link:hover{
+ transform:translateY(-3px);
+ border-color:rgba(0,255,255,.65);
+ box-shadow:
+ 0 0 25px rgba(0,255,255,.20),
+ inset 0 0 20px rgba(255,0,170,.04);
 }
 
-.app-icon {
-  width: 105px;
-  height: 105px;
-
-  margin: 0 auto 24px;
-  padding: 4px;
-
-  border-radius: 27px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #13003b,
-      #050014
-    );
-
-  border: 2px solid var(--cyan);
-
-  box-shadow:
-    0 0 22px rgba(0,255,255,.55),
-    0 0 45px rgba(0,255,255,.18),
-    inset 0 0 22px rgba(255,25,184,.16);
+.developer-icon{
+ width:82px;
+ height:82px;
+ border-radius:20px;
+ object-fit:contain;
+ display:block;
 }
 
-.app-icon img {
-  width: 100%;
-  height: 100%;
-
-  display: block;
-
-  object-fit: contain;
-
-  border-radius: 21px;
+.developer-name{
+ font-weight:900;
+ font-size:18px;
+ color:#fff;
 }
 
-h1 {
-  margin: 0;
-
-  font-size: clamp(34px,7vw,58px);
-  line-height: 1.1;
-
-  font-weight: 900;
-  letter-spacing: -1px;
-
-  background:
-    linear-gradient(
-      90deg,
-      var(--cyan),
-      #fff,
-      var(--pink)
-    );
-
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  color: transparent;
+.developer-sub{
+ font-size:14px;
+ color:#aaa7bc;
 }
 
-.hero-subtitle {
-  margin: 14px 0 0;
-  color: #c7c4d9;
+body.english{
+ direction:ltr;
 }
 
-.updated {
-  margin-top: 10px;
-  color: #777487;
-  font-size: 14px;
+body.english ul{
+ padding-right:0;
+ padding-left:25px;
 }
 
-/* ---------- POLICY CARDS ---------- */
-
-.card {
-  margin: 20px 0;
-  padding: 28px;
-
-  border-radius: 20px;
-
-  border: 1px solid var(--border);
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(17,7,38,.84),
-      rgba(4,2,13,.78)
-    );
-
-  box-shadow:
-    0 0 24px rgba(0,255,255,.055),
-    inset 0 0 26px rgba(255,25,184,.025);
-
-  transition:
-    transform .2s ease,
-    border-color .2s ease,
-    box-shadow .2s ease;
+.en{
+ display:none;
 }
 
-.card:hover {
-  transform: translateY(-2px);
-
-  border-color:
-    rgba(0,255,255,.30);
-
-  box-shadow:
-    0 0 30px rgba(0,255,255,.10),
-    inset 0 0 30px rgba(255,25,184,.035);
+body.english .ar{
+ display:none;
 }
 
-h2 {
-  margin: 0 0 18px;
-
-  color: var(--cyan);
-
-  font-size: 25px;
-
-  text-shadow:
-    0 0 8px rgba(0,255,255,.35),
-    0 0 18px rgba(0,255,255,.15);
+body.english .en{
+ display:block;
 }
 
-h3 {
-  margin: 25px 0 10px;
-
-  color: #ff4ac4;
-
-  text-shadow:
-    0 0 10px rgba(255,25,184,.35);
+footer{
+ text-align:center;
+ padding:35px 20px;
+ border-top:1px solid rgba(0,255,255,.12);
+ color:#777487;
 }
 
-p,
-li {
-  color: #c5c2d2;
+footer a{
+ color:#00ffff;
 }
 
-p {
-  margin: 0 0 16px;
+@media(max-width:600px){
+
+ main{
+  padding:50px 15px 80px;
+ }
+
+ .card{
+  padding:20px;
+ }
+
+ .icon{
+  width:90px;
+  height:90px;
+ }
+
+ .developer-icon{
+  width:72px;
+  height:72px;
+ }
 }
-
-p:last-child {
-  margin-bottom: 0;
-}
-
-ul {
-  padding-right: 25px;
-}
-
-li {
-  margin-bottom: 8px;
-}
-
-/* ---------- LINKS ---------- */
-
-a {
-  color: var(--cyan);
-  transition:
-    color .2s ease,
-    text-shadow .2s ease;
-}
-
-a:hover {
-  color: #fff;
-  text-shadow:
-    0 0 10px rgba(0,255,255,.65);
-}
-
-/* ---------- LANGUAGE ---------- */
-
-.en {
-  display: none;
-}
-
-body.english {
-  direction: ltr;
-}
-
-body.english .ar {
-  display: none;
-}
-
-body.english .en {
-  display: block;
-}
-
-body.english ul {
-  padding-right: 0;
-  padding-left: 25px;
-}
-
-/* ---------- FOOTER ---------- */
-
-footer {
-  position: relative;
-
-  padding: 35px 20px;
-
-  text-align: center;
-
-  border-top:
-    1px solid rgba(0,255,255,.12);
-
-  color: #777487;
-
-  font-size: 14px;
-  line-height: 1.8;
-}
-
-footer a {
-  color: var(--cyan);
-  text-decoration: none;
-}
-
-/* ---------- MOBILE ---------- */
-
-@media (max-width: 600px) {
-
-  nav {
-    padding: 12px 4%;
-  }
-
-  .logo {
-    font-size: 16px;
-  }
-
-  .nav-btn {
-    min-height: 40px;
-    padding: 0 12px;
-    font-size: 13px;
-  }
-
-  main {
-    padding: 55px 15px 80px;
-  }
-
-  .app-icon {
-    width: 90px;
-    height: 90px;
-  }
-
-  .card {
-    padding: 21px;
-    border-radius: 18px;
-  }
-
-  h2 {
-    font-size: 22px;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<!-- Background -->
-<div class="neon-grid"></div>
-<div class="neon-particles"></div>
-
-<div class="neon-decoration" aria-hidden="true">
-
-  <span
-    class="neon-brick cyan"
-    style="left:8%;top:11%"
-  ></span>
-
-  <span
-    class="neon-brick pink"
-    style="left:83%;top:13%"
-  ></span>
-
-  <span
-    class="neon-brick pink"
-    style="left:18%;top:31%"
-  ></span>
-
-  <span
-    class="neon-brick cyan"
-    style="left:91%;top:48%"
-  ></span>
-
-  <span
-    class="neon-brick cyan"
-    style="left:7%;top:63%"
-  ></span>
-
-  <span
-    class="neon-brick pink"
-    style="left:87%;top:76%"
-  ></span>
-
-  <span
-    class="neon-brick cyan"
-    style="left:24%;top:89%"
-  ></span>
-
-  <span
-    class="neon-brick pink"
-    style="left:72%;top:91%"
-  ></span>
-
-  <span
-    class="neon-ball cyan"
-    style="left:17%;top:20%"
-  ></span>
-
-  <span
-    class="neon-ball pink"
-    style="left:79%;top:22%"
-  ></span>
-
-  <span
-    class="neon-ball pink"
-    style="left:10%;top:43%"
-  ></span>
-
-  <span
-    class="neon-ball cyan"
-    style="left:92%;top:59%"
-  ></span>
-
-  <span
-    class="neon-ball cyan"
-    style="left:21%;top:70%"
-  ></span>
-
-  <span
-    class="neon-ball pink"
-    style="left:78%;top:68%"
-  ></span>
-
-  <span
-    class="neon-ball cyan"
-    style="left:48%;top:91%"
-  ></span>
-
-</div>
-
-<!-- Navigation -->
-<nav>
-
-  <div class="logo">
-    ⚡ NEON BREAKER PRO
-  </div>
-
-  <div class="nav-actions">
-
-    <a
-      class="nav-btn"
-      href="index.html"
-    >
-      <span class="ar">الرئيسية</span>
-      <span class="en">Home</span>
-    </a>
-
-    <button
-      class="nav-btn"
-      onclick="toggleLanguage()"
-      id="langBtn"
-    >
-      English
-    </button>
-
-  </div>
-
-</nav>
-
-<main>
-
-<!-- Header -->
-<div class="hero">
-
-  <div class="app-icon">
-
-    <img
-      src="assets/neonbreaker_icon.png"
-      alt="Neon Breaker Pro"
-    >
-
-  </div>
-
-  <h1>Privacy Policy</h1>
-
-  <p class="hero-subtitle ar">
-    سياسة الخصوصية — Neon Breaker Pro
-  </p>
-
-  <p class="hero-subtitle en">
-    Privacy Policy — Neon Breaker Pro
-  </p>
-
-  <p class="updated">
-
-    <span class="ar">
-      آخر تحديث: سبتمبر 2026
-    </span>
-
-    <span class="en">
-      Last updated: September 2026
-    </span>
-
-  </p>
-
-</div>
-
-<!-- 1 -->
-<div class="card">
-
-  <h2 class="ar">1. مقدمة</h2>
-  <h2 class="en">1. Introduction</h2>
-
-  <p class="ar">
-    نحن نحترم خصوصية مستخدمي Neon Breaker Pro.
-    توضح هذه السياسة كيفية تعامل التطبيق مع المعلومات
-    والبيانات عند استخدام اللعبة.
-  </p>
-
-  <p class="en">
-    We respect the privacy of Neon Breaker Pro users.
-    This policy explains how information and data may be
-    handled when you use the game.
-  </p>
-
-</div>
-
-<!-- 2 -->
-<div class="card">
-
-  <h2 class="ar">
-    2. المعلومات التي يجمعها التطبيق
-  </h2>
-
-  <h2 class="en">
-    2. Information We Collect
-  </h2>
-
-  <p class="ar">
-    اللعبة نفسها لا تطلب منك إنشاء حساب مستخدم ولا تطلب منك
-    إدخال اسم أو عنوان أو رقم هاتف أو معلومات شخصية مباشرة
-    من أجل لعب اللعبة.
-  </p>
-
-  <p class="en">
-    The game does not require you to create a user account
-    and does not directly ask you to provide your name,
-    address, phone number, or similar personal information
-    in order to play.
-  </p>
-
-  <p class="ar">
-    ومع ذلك، قد تستخدم خدمات خارجية مدمجة في التطبيق،
-    مثل خدمات الإعلانات، وقد تقوم هذه الخدمات بمعالجة
-    بعض المعلومات التقنية وفق سياساتها الخاصة.
-  </p>
-
-  <p class="en">
-    However, the app may use integrated third-party services,
-    such as advertising services, which may process certain
-    technical information according to their own privacy policies.
-  </p>
-
-</div>
-
-<!-- 3 -->
-<div class="card">
-
-  <h2 class="ar">
-    3. Unity Ads والإعلانات
-  </h2>
-
-  <h2 class="en">
-    3. Unity Ads and Advertising
-  </h2>
-
-  <p class="ar">
-    يستخدم Neon Breaker Pro خدمة Unity Ads لعرض الإعلانات
-    داخل اللعبة. قد تتضمن الإعلانات إعلانات عادية وإعلانات
-    مكافئة تمنح اللاعب فرصة إضافية أو مكافأة داخل اللعبة
-    عند مشاهدة الإعلان واستيفاء شروطه.
-  </p>
-
-  <p class="en">
-    Neon Breaker Pro uses Unity Ads to display advertisements
-    within the game. These may include regular advertisements
-    and rewarded advertisements that can provide an additional
-    gameplay opportunity or in-game reward when the advertisement
-    is viewed and its conditions are satisfied.
-  </p>
-
-  <h3 class="ar">
-    ما الذي قد تعالجه Unity؟
-  </h3>
-
-  <h3 class="en">
-    What may Unity process?
-  </h3>
-
-  <p class="ar">
-    قد تقوم Unity، بحسب إعدادات الجهاز والمنطقة وطريقة تقديم
-    الإعلانات، بمعالجة معلومات تقنية مثل معلومات الجهاز،
-    معرفات الإعلانات، معلومات الشبكة، بيانات الاستخدام
-    والتفاعل مع الإعلانات، ومعلومات ضرورية لتقديم الإعلانات
-    وقياس أدائها ومنع الاحتيال.
-  </p>
-
-  <p class="en">
-    Depending on device settings, region, and how advertising
-    is delivered, Unity may process technical information such
-    as device information, advertising identifiers, network
-    information, usage and advertising interaction data,
-    and information needed to deliver ads, measure advertising
-    performance, and help prevent fraud.
-  </p>
-
-  <p class="ar">
-    قد تختلف طريقة معالجة البيانات والإعلانات المخصصة حسب
-    البلد وإعدادات الخصوصية والموافقة المتاحة على الجهاز.
-  </p>
-
-  <p class="en">
-    The way data and personalized advertising are handled
-    may vary depending on your country, privacy settings,
-    and applicable consent choices.
-  </p>
-
-  <p>
-
-    <span class="ar">
-      لمزيد من المعلومات، يرجى مراجعة سياسة خصوصية Unity الرسمية:
-    </span>
-
-    <span class="en">
-      For more information, please review Unity's official privacy policy:
-    </span>
-
-    <br>
-
-    <a
-      href="https://unity.com/legal/game-player-and-app-user-privacy-policy"
-      target="_blank"
-      rel="noopener"
-    >
-      Unity Game Player and App User Privacy Policy
-    </a>
-
-  </p>
-
-</div>
-
-<!-- 4 -->
-<div class="card">
-
-  <h2 class="ar">
-    4. الإعلانات المكافئة
-  </h2>
-
-  <h2 class="en">
-    4. Rewarded Advertisements
-  </h2>
-
-  <p class="ar">
-    قد يختار اللاعب مشاهدة إعلان مكافئ للحصول على مكافأة
-    داخل اللعبة، مثل فرصة إضافية لمواصلة اللعب.
-    مشاهدة الإعلان اختيارية، ولا يتم منح المكافأة إلا عند
-    اكتمال شروط الإعلان بنجاح.
-  </p>
-
-  <p class="en">
-    Players may choose to watch a rewarded advertisement
-    to receive an in-game reward, such as an additional
-    opportunity to continue playing. Watching a rewarded
-    advertisement is optional, and the reward is granted
-    only when the required advertising conditions are
-    successfully completed.
-  </p>
-
-</div>
-
-<!-- 5 -->
-<div class="card">
-
-  <h2 class="ar">
-    5. خدمات الطرف الثالث
-  </h2>
-
-  <h2 class="en">
-    5. Third-Party Services
-  </h2>
-
-  <p class="ar">
-    قد تعتمد اللعبة على خدمات خارجية لتوفير وظائف مثل
-    الإعلانات. تخضع هذه الخدمات لسياسات الخصوصية وشروط
-    الاستخدام الخاصة بمقدميها.
-  </p>
-
-  <p class="en">
-    The game may rely on third-party services to provide
-    features such as advertising. These services are governed
-    by the privacy policies and terms of their respective providers.
-  </p>
-
-</div>
-
-<!-- 6 -->
-<div class="card">
-
-  <h2 class="ar">
-    6. أمن المعلومات
-  </h2>
-
-  <h2 class="en">
-    6. Data Security
-  </h2>
-
-  <p class="ar">
-    نسعى إلى استخدام ممارسات مناسبة لحماية التطبيق وبياناته.
-    ومع ذلك، لا يمكن ضمان أمان أي عملية نقل أو تخزين للبيانات
-    بنسبة 100%.
-  </p>
-
-  <p class="en">
-    We seek to use appropriate practices to protect the
-    application and its data. However, no method of transmission
-    or storage can be guaranteed to be 100% secure.
-  </p>
-
-</div>
-
-<!-- 7 -->
-<div class="card">
-
-  <h2 class="ar">
-    7. خصوصية الأطفال
-  </h2>
-
-  <h2 class="en">
-    7. Children's Privacy
-  </h2>
-
-  <p class="ar">
-    لا نهدف إلى جمع معلومات شخصية مباشرة من الأطفال.
-    إذا كنت تعتقد أن معلومات شخصية تم تقديمها إلينا
-    بشكل غير مقصود، يرجى التواصل معنا لاتخاذ الإجراءات المناسبة.
-  </p>
-
-  <p class="en">
-    We do not intend to directly collect personal information
-    from children. If you believe personal information has
-    been unintentionally provided, please contact us so that
-    appropriate action can be taken.
-  </p>
-
-</div>
-
-<!-- 8 -->
-<div class="card">
-
-  <h2 class="ar">
-    8. خيارات الخصوصية
-  </h2>
-
-  <h2 class="en">
-    8. Privacy Choices
-  </h2>
-
-  <p class="ar">
-    يمكنك استخدام إعدادات الخصوصية والإعلانات في جهازك،
-    حيثما كانت متاحة، لإدارة بعض خيارات الإعلانات
-    ومعرفات الإعلانات.
-  </p>
-
-  <p class="en">
-    Where available, you can use your device's privacy
-    and advertising settings to manage certain advertising
-    and advertising-identifier choices.
-  </p>
-
-</div>
-
-<!-- 9 -->
-<div class="card">
-
-  <h2 class="ar">
-    9. التغييرات على سياسة الخصوصية
-  </h2>
-
-  <h2 class="en">
-    9. Changes to This Policy
-  </h2>
-
-  <p class="ar">
-    قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر.
-    سيتم نشر أي تغييرات على هذه الصفحة مع تحديث تاريخ
-    آخر تعديل.
-  </p>
-
-  <p class="en">
-    We may update this Privacy Policy from time to time.
-    Any changes will be published on this page together
-    with an updated revision date.
-  </p>
-
-</div>
-
-<!-- 10 -->
-<div class="card">
-
-  <h2 class="ar">
-    10. التواصل
-  </h2>
-
-  <h2 class="en">
-    10. Contact
-  </h2>
-
-  <p class="ar">
-    إذا كانت لديك أسئلة حول سياسة الخصوصية أو طريقة تعامل
-    التطبيق مع البيانات، يمكنك التواصل مع مطور التطبيق
-    عبر صفحة المشروع الرسمية.
-  </p>
-
-  <p class="en">
-    If you have questions about this Privacy Policy or how
-    the app handles data, you may contact the developer
-    through the official project page.
-  </p>
-
-  <p>
-
-    <a
-      href="https://github.com/Ebrahassad/-Neon-Breaker-Pro."
-      target="_blank"
-      rel="noopener"
-    >
-      GitHub — Neon Breaker Pro
-    </a>
-
-  </p>
-
-</div>
-
-</main>
-
-<!-- Footer -->
-<footer>
-
+</style></head><body><div class="grid"></div><nav>
+ <div class="logo">⚡ NEON BREAKER PRO</div>
+ <button onclick="toggleLanguage()" id="langBtn">English</button>
+</nav><main><div class="hero"> <div class="icon">
+  <img src="assets/neonbreaker_icon.png" alt="Neon Breaker Pro">
+ </div> <h1>
+  <span class="ar">سياسة الخصوصية</span>
+  <span class="en">Privacy Policy</span>
+ </h1> <p class="ar">
+  سياسة الخصوصية — Neon Breaker Pro
+ </p> <p class="en">
+  Privacy Policy — Neon Breaker Pro
+ </p> <p class="updated">
+  <span class="ar">آخر تحديث: سبتمبر 2026</span>
+  <span class="en">Last updated: September 2026</span>
+ </p></div><div class="card"> <h2 class="ar">1. مقدمة</h2>
+ <h2 class="en">1. Introduction</h2> <p class="ar">
+  نحن نحترم خصوصية مستخدمي Neon Breaker Pro.
+  تم تصميم اللعبة بحيث يمكن لعبها دون الحاجة إلى إنشاء حساب
+  أو تقديم معلومات شخصية.
+ </p> <p class="en">
+  We respect the privacy of Neon Breaker Pro users.
+  The game is designed to be playable without creating an account
+  or providing personal information.
+ </p></div><div class="card"> <h2 class="ar">2. جمع المعلومات والبيانات</h2>
+ <h2 class="en">2. Information and Data Collection</h2> <p class="ar">
+  Neon Breaker Pro لا تجمع أي معلومات شخصية من المستخدمين.
+  لا تحتوي اللعبة على نظام تسجيل دخول أو إنشاء حساب، ولا تطلب من
+  المستخدم إدخال اسمه أو بريده الإلكتروني أو رقم هاتفه أو عنوانه
+  أو أي معلومات شخصية أخرى.
+ </p> <p class="en">
+  Neon Breaker Pro does not collect personal information from users.
+  The game does not contain a login or account-registration system
+  and does not ask users to enter their name, email address, phone number,
+  address, or other personal information.
+ </p> <p class="ar">
+  كما لا تحتوي اللعبة على نموذج أو نظام مخصص لإدخال المعلومات
+  الشخصية من قبل المستخدم.
+ </p> <p class="en">
+  The game also does not contain a form or system designed to collect
+  personal information directly from the user.
+ </p> <p class="ar">
+  قد تقوم خدمات الطرف الثالث المدمجة في اللعبة، مثل خدمات الإعلانات،
+  بمعالجة بعض المعلومات التقنية اللازمة لتقديم خدماتها وفقًا
+  لسياساتها الخاصة.
+ </p> <p class="en">
+  Third-party services integrated into the game, such as advertising
+  services, may process certain technical information required to
+  provide their services according to their own policies.
+ </p></div><div class="card"> <h2 class="ar">3. Unity Ads والإعلانات</h2>
+ <h2 class="en">3. Unity Ads and Advertising</h2> <p class="ar">
+  يستخدم Neon Breaker Pro خدمة Unity Ads لعرض الإعلانات داخل اللعبة.
+  قد تتضمن الإعلانات إعلانات عادية وإعلانات مكافئة يمكن أن تمنح
+  اللاعب فرصة إضافية أو مكافأة داخل اللعبة عند مشاهدة الإعلان
+  واستيفاء شروطه.
+ </p> <p class="en">
+  Neon Breaker Pro uses Unity Ads to display advertisements within
+  the game. These may include regular advertisements and rewarded
+  advertisements that may provide an additional gameplay opportunity
+  or in-game reward when the advertisement is viewed and its conditions
+  are satisfied.
+ </p> <h3 class="ar">المعلومات التي قد تعالجها Unity</h3>
+ <h3 class="en">Information Unity May Process</h3> <p class="ar">
+  بحسب إعدادات الجهاز والمنطقة وطريقة تقديم الإعلانات، قد تقوم Unity
+  بمعالجة معلومات تقنية مثل معلومات الجهاز، معرفات الإعلانات،
+  معلومات الشبكة، بيانات الاستخدام والتفاعل مع الإعلانات، ومعلومات
+  ضرورية لتقديم الإعلانات وقياس أدائها والمساعدة في منع الاحتيال.
+ </p> <p class="en">
+  Depending on device settings, region, and how advertising is delivered,
+  Unity may process technical information such as device information,
+  advertising identifiers, network information, usage and advertising
+  interaction data, and information needed to deliver ads, measure
+  advertising performance, and help prevent fraud.
+ </p> <p class="ar">
+  قد تختلف طريقة معالجة البيانات والإعلانات المخصصة حسب البلد
+  وإعدادات الخصوصية والموافقة المتاحة على الجهاز.
+ </p> <p class="en">
+  The way data and personalized advertising are handled may vary
+  depending on your country, privacy settings, and applicable
+  consent choices.
+ </p> <p>
   <span class="ar">
-    Neon Breaker Pro © 2026 — Hassadi
-  </span>
+   لمزيد من المعلومات، يرجى مراجعة سياسة خصوصية Unity الرسمية:
+  </span>  <span class="en">
+   For more information, please review Unity's official privacy policy:
+  </span>  <br><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy"
+target="_blank"
+rel="noopener">
+Unity Game Player and App User Privacy Policy
+</a>
 
-  <span class="en">
-    Neon Breaker Pro © 2026 — Hassadi
-  </span>
-
-  <br><br>
-
-  <a href="index.html">
-
-    <span class="ar">
-      العودة إلى الصفحة الرئيسية
-    </span>
-
-    <span class="en">
-      Back to Home
-    </span>
-
+ </p></div><div class="card"> <h2 class="ar">4. الإعلانات المكافئة</h2>
+ <h2 class="en">4. Rewarded Advertisements</h2> <p class="ar">
+  قد يختار اللاعب مشاهدة إعلان مكافئ للحصول على مكافأة داخل اللعبة،
+  مثل فرصة إضافية لمواصلة اللعب.
+  مشاهدة الإعلان المكافئ اختيارية، ولا يتم منح المكافأة إلا عند
+  اكتمال شروط الإعلان بنجاح.
+ </p> <p class="en">
+  Players may choose to watch a rewarded advertisement to receive
+  an in-game reward, such as an additional opportunity to continue
+  playing. Watching a rewarded advertisement is optional, and the
+  reward is granted only when the required advertising conditions
+  are successfully completed.
+ </p></div><div class="card"> <h2 class="ar">5. خدمات الطرف الثالث</h2>
+ <h2 class="en">5. Third-Party Services</h2> <p class="ar">
+  قد تعتمد اللعبة على خدمات خارجية لتوفير وظائف مثل الإعلانات.
+  تخضع هذه الخدمات لسياسات الخصوصية وشروط الاستخدام الخاصة
+  بمقدميها.
+ </p> <p class="en">
+  The game may rely on third-party services to provide features
+  such as advertising. These services are governed by the privacy
+  policies and terms of their respective providers.
+ </p></div><div class="card"> <h2 class="ar">6. أمن المعلومات</h2>
+ <h2 class="en">6. Data Security</h2> <p class="ar">
+  نظرًا لأن اللعبة لا تجمع أو تخزن معلومات شخصية مباشرة من المستخدم،
+  فلا يوجد لدينا نظام خاص لتخزين حسابات المستخدمين أو بياناتهم الشخصية.
+  ومع ذلك، قد تقوم خدمات الطرف الثالث بمعالجة البيانات وفقًا
+  لإجراءات وسياسات الأمان الخاصة بها.
+ </p> <p class="en">
+  Since the game does not directly collect or store personal information
+  from users, we do not operate a system for storing user accounts or
+  personal user data. However, third-party services may process data
+  according to their own security practices and policies.
+ </p></div><div class="card"> <h2 class="ar">7. خيارات الخصوصية</h2>
+ <h2 class="en">7. Privacy Choices</h2> <p class="ar">
+  يمكنك استخدام إعدادات الخصوصية والإعلانات في جهازك، حيثما كانت
+  متاحة، لإدارة بعض خيارات الإعلانات ومعرفات الإعلانات.
+ </p> <p class="en">
+  Where available, you can use your device's privacy and advertising
+  settings to manage certain advertising and advertising-identifier choices.
+ </p></div><div class="card"> <h2 class="ar">8. التغييرات على سياسة الخصوصية</h2>
+ <h2 class="en">8. Changes to This Policy</h2> <p class="ar">
+  قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر.
+  سيتم نشر أي تغييرات على هذه الصفحة مع تحديث تاريخ آخر تعديل.
+ </p> <p class="en">
+  We may update this Privacy Policy from time to time.
+  Any changes will be published on this page together with
+  an updated revision date.
+ </p></div><div class="card"> <h2 class="ar">9. التواصل</h2>
+ <h2 class="en">9. Contact</h2> <p class="ar">
+  إذا كانت لديك أسئلة حول سياسة الخصوصية أو طريقة تعامل اللعبة
+  مع البيانات، يمكنك التواصل مباشرة مع مطور اللعبة عبر البريد
+  الإلكتروني التالي:
+ </p> <p class="en">
+  If you have questions about this Privacy Policy or how the game
+  handles data, you can contact the developer directly using
+  the following email address:
+ </p> <p style="text-align:center">
+  <a href="mailto:ebrahassadi77@gmail.com">
+   ebrahassadi77@gmail.com
   </a>
+ </p></div><div class="card developer-card"> <h2 class="ar">المزيد من البرامج والألعاب</h2>
+ <h2 class="en">More Apps & Games</h2> <p class="ar">
+  اكتشف المزيد من التطبيقات والألعاب التي طورها Hassadi.
+ </p> <p class="en">
+  Discover more apps and games developed by Hassadi.
+ </p><a class="developer-link"
+href="https://ebrahassad.github.io/Hassadi-Apps/"
+target="_blank"
+rel="noopener">
 
-</footer>
+<img
+class="developer-icon"
+src="assets/icon_h.png"
+alt="Hassadi">
 
-<script>
-function toggleLanguage() {
+  <span class="developer-name">
+   Hassadi
+  </span>  <span class="developer-sub ar">
+   المزيد من البرامج والألعاب
+  </span>  <span class="developer-sub en">
+   More Apps & Games
+  </span> </a></div></main><footer> <span class="ar">
+  Neon Breaker Pro © 2026 — Hassadi
+ </span> <span class="en">
+  Neon Breaker Pro © 2026 — Hassadi
+ </span><br><br>
 
-  const english =
-    document.body.classList.toggle("english");
+ <a href="index.html">
+  <span class="ar">العودة إلى الصفحة الرئيسية</span>
+  <span class="en">Back to Home</span>
+ </a></footer><script>
+function toggleLanguage(){
+ const english=document.body.classList.toggle("english");
 
-  document.documentElement.lang =
-    english ? "en" : "ar";
+ document.documentElement.lang=english?"en":"ar";
+ document.documentElement.dir=english?"ltr":"rtl";
 
-  document.documentElement.dir =
-    english ? "ltr" : "rtl";
-
-  document.getElementById("langBtn").textContent =
-    english ? "العربية" : "English";
+ document.getElementById("langBtn").textContent=
+   english ? "العربية" : "English";
 }
-</script>
-
-</body>
+</script></body>
 </html>
