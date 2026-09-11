@@ -3,264 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#050014">
+<meta name="theme-color" content="#020208">
 <meta name="description" content="Neon Breaker Pro — لعبة Brick Breaker نيون سريعة ومليئة بالتحديات.">
 <title>Neon Breaker Pro</title>
 
 <style>
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
- margin:0;
- font-family:Arial,Helvetica,sans-serif;
- background:#050014;
- color:#fff;
- overflow-x:hidden;
-}
-body:before{
- content:"";
- position:fixed;
- inset:0;
- pointer-events:none;
- background:
- radial-gradient(circle at 20% 20%,rgba(0,255,255,.12),transparent 30%),
- radial-gradient(circle at 80% 70%,rgba(255,0,170,.12),transparent 30%);
- z-index:-2;
-}
-.grid{
- position:fixed;
- inset:0;
- background-image:
- linear-gradient(rgba(0,255,255,.035) 1px,transparent 1px),
- linear-gradient(90deg,rgba(0,255,255,.035) 1px,transparent 1px);
- background-size:45px 45px;
- transform:perspective(500px) rotateX(55deg) scale(2);
- transform-origin:center bottom;
- opacity:.45;
- z-index:-1;
+/* =========================================================
+   NEON BREAKER PRO — WEBSITE
+   Clean unified theme
+   ========================================================= */
+
+:root {
+  --cyan: #00ffff;
+  --cyan-bright: #39ecff;
+  --cyan-deep: #087fbe;
+  --pink: #ff19b8;
+  --purple: #8b5cff;
+  --bg: #020208;
+  --panel: rgba(7,3,18,.78);
+  --text: #ffffff;
+  --muted: #aaa7bc;
+  --border: rgba(0,255,255,.18);
 }
 
-nav{
- position:fixed;
- top:0;
- width:100%;
- z-index:20;
- padding:15px 5%;
- display:flex;
- justify-content:space-between;
- align-items:center;
- background:rgba(5,0,20,.78);
- backdrop-filter:blur(14px);
- border-bottom:1px solid rgba(0,255,255,.15);
-}
-.logo{
- font-size:20px;
- font-weight:900;
- letter-spacing:1px;
- color:#fff;
- text-shadow:0 0 12px #00ffff;
-}
-nav button{
- border:1px solid #00ffff;
- background:rgba(0,255,255,.08);
- color:#00ffff;
- padding:8px 15px;
- border-radius:20px;
- cursor:pointer;
- font-weight:bold;
+/* ---------- RESET ---------- */
+
+* {
+  box-sizing: border-box;
 }
 
-.hero{
- min-height:100vh;
- display:flex;
- align-items:center;
- justify-content:center;
- text-align:center;
- padding:110px 20px 70px;
-}
-.hero-inner{max-width:850px}
-.icon{
- width:130px;
- height:130px;
- margin:0 auto 25px;
- border-radius:30px;
- display:flex;
- align-items:center;
- justify-content:center;
- font-size:58px;
- background:
- linear-gradient(145deg,#13003b,#050014);
- border:2px solid #00ffff;
- box-shadow:
- 0 0 20px #00ffff,
- 0 0 55px rgba(0,255,255,.35),
- inset 0 0 25px rgba(255,0,170,.2);
-}
-.icon img{
- width:100%;
- height:100%;
- object-fit:contain;
- border-radius:28px;
- display:block;
-}
-h1{
- font-size:clamp(42px,9vw,78px);
- margin:0;
- font-weight:1000;
- letter-spacing:-2px;
- background:linear-gradient(90deg,#00ffff,#fff,#ff19b8);
- -webkit-background-clip:text;
- color:transparent;
-}
-.subtitle{
- margin:18px auto;
- max-width:650px;
- color:#c7c4d9;
- font-size:clamp(17px,3vw,21px);
- line-height:1.8;
-}
-.buttons{
- display:flex;
- gap:14px;
- justify-content:center;
- flex-wrap:wrap;
- margin-top:30px;
-}
-.btn{
- display:inline-block;
- padding:14px 25px;
- border-radius:30px;
- text-decoration:none;
- font-weight:900;
- transition:.25s;
-}
-.primary{
- color:#050014;
- background:#00ffff;
- box-shadow:0 0 25px rgba(0,255,255,.55);
-}
-.secondary{
- color:#ff4ac4;
- border:1px solid #ff19b8;
- background:rgba(255,0,170,.06);
-}
-.btn:hover{
- transform:translateY(-3px) scale(1.03);
-}
-
-section{
- padding:80px 6%;
- max-width:1200px;
- margin:auto;
-}
-.section-title{
- text-align:center;
- font-size:34px;
- margin-bottom:15px;
- color:#00ffff;
- text-shadow:0 0 14px rgba(0,255,255,.6);
-}
-.section-sub{
- text-align:center;
- color:#aaa7bc;
- margin-bottom:45px;
-}
-
-.features{
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
- gap:20px;
-}
-.card{
- padding:25px;
- border:1px solid rgba(0,255,255,.2);
- border-radius:20px;
- background:linear-gradient(145deg,rgba(17,0,50,.82),rgba(5,0,20,.82));
- box-shadow:0 0 25px rgba(0,255,255,.06);
-}
-.card-icon{
- font-size:32px;
- margin-bottom:12px;
-}
-.card h3{
- margin:5px 0 10px;
- color:#fff;
-}
-.card p{
- margin:0;
- color:#aaa7bc;
- line-height:1.7;
-}
-
-.game-showcase{
- display:grid;
- grid-template-columns:1fr 1fr;
- gap:25px;
- align-items:center;
-}
-.info-list{
- list-style:none;
- padding:0;
- line-height:2.1;
- color:#c8c5d7;
-}
-.info-list li::before{
- content:"⚡";
- color:#00ffff;
- margin-left:8px;
-}
-
-.cta{
- text-align:center;
- padding:80px 20px 110px;
-}
-footer{
- text-align:center;
- padding:35px 20px;
- border-top:1px solid rgba(0,255,255,.12);
- color:#777487;
- font-size:14px;
-}
-footer a{
- color:#00ffff;
- text-decoration:none;
-}
-
-.en{display:none}
-body.english{direction:ltr}
-body.english .ar{display:none}
-body.english .en{display:block}
-body.english .inline-en{display:inline}
-body:not(.english) .inline-en{display:none}
-
-@media(max-width:750px){
- .game-showcase{grid-template-columns:1fr}
- section{padding:65px 5%}
-}
-</style>
-
-<style id="neonbreaker-home-background">
-/* ============================================================
-   NEONBREAKER PRO — GAME-MATCH BACKGROUND
-   Mirrors _NeonBackgroundPainter from the Flutter game
-   ============================================================ */
-
-html,
-body {
-  background: #020208 !important;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  position: relative;
+  margin: 0;
+  min-height: 100vh;
   overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
 }
 
-/* Main radial gradient — same visual direction as the game */
+/* ---------- BACKGROUND ---------- */
+
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  z-index: -10;
+  z-index: -20;
   pointer-events: none;
   background:
     radial-gradient(
@@ -271,38 +62,38 @@ body::before {
     );
 }
 
-/* Soft cyan / pink / purple glow areas */
 body::after {
   content: "";
   position: fixed;
   inset: 0;
-  z-index: -9;
+  z-index: -19;
   pointer-events: none;
   background:
     radial-gradient(
-      circle 150px at 12% 18%,
-      rgba(0,255,255,.055),
+      circle 180px at 10% 15%,
+      rgba(0,255,255,.06),
       transparent 70%
     ),
     radial-gradient(
-      circle 145px at 88% 30%,
-      rgba(255,25,184,.055),
+      circle 170px at 90% 28%,
+      rgba(255,25,184,.06),
       transparent 70%
     ),
     radial-gradient(
-      circle 210px at 50% 88%,
+      circle 230px at 50% 90%,
       rgba(139,92,255,.045),
       transparent 70%
     );
 }
 
-/* Very subtle game grid */
-.neon-game-bg-grid {
+/* Neon grid */
+
+.neon-grid {
   position: fixed;
   inset: 0;
-  z-index: -8;
+  z-index: -18;
   pointer-events: none;
-  opacity: .95;
+  opacity: .65;
   background-image:
     linear-gradient(
       to right,
@@ -317,11 +108,12 @@ body::after {
   background-size: 44px 44px;
 }
 
-/* Decorative neon particles */
-.neon-game-particles {
+/* Decorative particles */
+
+.neon-particles {
   position: fixed;
   inset: 0;
-  z-index: -7;
+  z-index: -17;
   pointer-events: none;
   background:
     radial-gradient(circle at 6% 8%, rgba(0,255,255,.75) 0 2px, transparent 3px),
@@ -347,1110 +139,1019 @@ body::after {
   filter: drop-shadow(0 0 5px rgba(0,255,255,.25));
 }
 
-/* Neon bricks from the game background */
-.neon-game-bricks {
+/* Decorative bricks and balls */
+
+.neon-decoration {
   position: fixed;
   inset: 0;
-  z-index: -6;
+  z-index: -16;
   pointer-events: none;
 }
 
-.neon-game-bricks::before {
-  content: "";
+.neon-brick {
   position: absolute;
   width: 25px;
   height: 9px;
-  left: 8%;
-  top: 11%;
-  border: 1px solid rgba(0,255,255,.55);
   border-radius: 3px;
-  box-shadow:
-    0 0 10px rgba(0,255,255,.22),
-    0 0 20px rgba(0,255,255,.08),
-    75vw 2vh 0 0 rgba(255,25,184,.5),
-    10vw 20vh 0 0 rgba(255,25,184,.5),
-    83vw 37vh 0 0 rgba(0,255,255,.5),
-    -1vw 52vh 0 0 rgba(0,255,255,.5),
-    79vw 65vh 0 0 rgba(255,25,184,.5),
-    16vw 78vh 0 0 rgba(0,255,255,.5),
-    64vw 80vh 0 0 rgba(255,25,184,.5);
+  border: 1px solid currentColor;
+  opacity: .55;
 }
 
-/* Neon balls */
-.neon-game-balls {
-  position: fixed;
-  inset: 0;
-  z-index: -5;
-  pointer-events: none;
+.neon-brick.cyan {
+  color: var(--cyan);
+  box-shadow: 0 0 12px rgba(0,255,255,.35);
 }
 
-.neon-game-balls::before {
-  content: "";
+.neon-brick.pink {
+  color: var(--pink);
+  box-shadow: 0 0 12px rgba(255,25,184,.35);
+}
+
+.neon-ball {
   position: absolute;
-  left: 17%;
-  top: 20%;
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: rgba(0,255,255,.75);
+}
+
+.neon-ball.cyan {
+  background: var(--cyan);
   box-shadow:
-    0 0 12px rgba(0,255,255,.55),
-    0 0 25px rgba(0,255,255,.22),
-    62vw 2vh 0 0 rgba(255,25,184,.75),
-    -7vw 23vh 0 0 rgba(255,25,184,.75),
-    75vw 39vh 0 0 rgba(0,255,255,.75),
-    4vw 50vh 0 0 rgba(0,255,255,.75),
-    61vw 48vh 0 0 rgba(255,25,184,.75),
-    31vw 71vh 0 0 rgba(0,255,255,.75);
+    0 0 12px rgba(0,255,255,.75),
+    0 0 25px rgba(0,255,255,.3);
 }
 
-/* Diagonal neon lines from the game */
-.neon-game-lines {
-  position: fixed;
-  inset: 0;
-  z-index: -4;
-  pointer-events: none;
-  overflow: hidden;
+.neon-ball.pink {
+  background: var(--pink);
+  box-shadow:
+    0 0 12px rgba(255,25,184,.75),
+    0 0 25px rgba(255,25,184,.3);
 }
 
-.neon-game-lines::before,
-.neon-game-lines::after {
-  content: "";
+.neon-line {
   position: absolute;
-  height: 1px;
   width: 46vw;
-  background: rgba(255,25,184,.09);
-  box-shadow: 0 0 10px rgba(255,25,184,.08);
-}
-
-.neon-game-lines::before {
-  left: -7vw;
-  top: 30%;
+  height: 1px;
+  opacity: .18;
   transform: rotate(-42deg);
 }
 
-.neon-game-lines::after {
-  right: -7vw;
-  bottom: 30%;
-  transform: rotate(-42deg);
+.neon-line.cyan {
+  background: var(--cyan);
+  box-shadow: 0 0 10px var(--cyan);
 }
 
-/* Keep page sections transparent enough for the game background to remain visible */
-section,
-.game-showcase,
-.hero,
-main {
-  position: relative;
+.neon-line.pink {
+  background: var(--pink);
+  box-shadow: 0 0 10px var(--pink);
 }
 
-.neon-panel,
-.card,
-.feature-card,
-.download-card {
-  background: rgba(7,3,18,.72);
-  border-color: rgba(0,255,255,.18);
-  box-shadow:
-    0 0 25px rgba(0,255,255,.055),
-    inset 0 0 25px rgba(255,25,184,.025);
+/* ---------- NAVIGATION ---------- */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  padding: 14px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  background: rgba(2,2,8,.82);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(0,255,255,.15);
 }
 
-/* NeonBreaker-style headings */
-h1,
-h2,
-h3 {
+.logo {
+  color: #fff;
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: 1px;
   text-shadow:
-    0 0 8px rgba(255,255,255,.18),
-    0 0 18px rgba(0,255,255,.20),
-    0 0 32px rgba(0,255,255,.10);
+    0 0 10px rgba(0,255,255,.65),
+    0 0 22px rgba(0,255,255,.25);
 }
 
-/* Responsive glow */
-@media (max-width: 750px) {
-  body::before {
-    background:
-      radial-gradient(
-        ellipse 145% 105% at 50% 35%,
-        #1b0a35 0%,
-        #090417 50%,
-        #020208 100%
-      );
-  }
-
-  .neon-game-bg-grid {
-    background-size: 38px 38px;
-  }
-}
-</style>
-
-
-<style id="neonbreaker-game-theme">
-/* =========================================================
-   NEONBREAKER PRO — GAME UI THEME
-   ========================================================= */
-
-:root {
-  --nb-cyan: #00ffff;
-  --nb-cyan-bright: #39ecff;
-  --nb-cyan-dark: #087fbe;
-  --nb-pink: #ff00aa;
-  --nb-purple: #8b5cff;
-  --nb-bg: #020208;
-  --nb-panel: rgba(255,255,255,.035);
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-/* ---------- General ---------- */
-
-body {
-  background-color: var(--nb-bg) !important;
-  color: #fff !important;
-}
-
-a {
-  color: var(--nb-cyan);
+.nav-btn {
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,255,255,.45);
+  background: rgba(0,255,255,.05);
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
   transition: .2s ease;
 }
 
-a:hover {
-  color: #b8f9ff;
-  text-shadow: 0 0 10px var(--nb-cyan);
+.nav-btn:hover {
+  color: var(--cyan);
+  border-color: var(--cyan);
+  box-shadow: 0 0 18px rgba(0,255,255,.18);
 }
 
-/* ---------- Headings ---------- */
+/* ---------- HERO ---------- */
 
-h1,
-h2,
-h3 {
-  color: #fff;
-  text-shadow:
-    0 0 5px rgba(0,255,255,.35),
-    0 0 18px rgba(0,255,255,.18);
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 20px 80px;
+}
+
+.hero-inner {
+  width: 100%;
+  max-width: 900px;
+}
+
+.app-icon {
+  width: 145px;
+  height: 145px;
+  margin: 0 auto 28px;
+  padding: 5px;
+  border-radius: 32px;
+  background: linear-gradient(145deg,#13003b,#050014);
+  border: 2px solid var(--cyan);
+  box-shadow:
+    0 0 20px var(--cyan),
+    0 0 55px rgba(0,255,255,.30),
+    inset 0 0 25px rgba(255,0,170,.2);
+}
+
+.app-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  border-radius: 26px;
 }
 
 h1 {
+  margin: 0;
+  font-size: clamp(42px,9vw,78px);
+  line-height: 1;
   font-weight: 900;
-  letter-spacing: 2.8px;
+  letter-spacing: -2px;
+  background: linear-gradient(
+    90deg,
+    var(--cyan),
+    #fff,
+    var(--pink)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: none;
 }
 
-/* ---------- Neon panels / cards ---------- */
-
-.card,
-.panel,
-.info-card,
-.feature,
-.game-card,
-.download-card,
-section article {
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,.045),
-      rgba(255,255,255,.018)
-    ) !important;
-
-  border: 1px solid rgba(0,255,255,.18) !important;
-  border-radius: 20px !important;
-
-  box-shadow:
-    0 0 18px rgba(0,255,255,.06),
-    inset 0 0 25px rgba(255,0,170,.025) !important;
+.subtitle {
+  max-width: 700px;
+  margin: 22px auto;
+  color: #c7c4d9;
+  font-size: clamp(17px,3vw,21px);
+  line-height: 1.85;
 }
 
-/* ---------- ALL BUTTONS ---------- */
+/* ---------- BUTTONS ---------- */
 
-button,
-.btn,
-.button,
-a.btn,
-a.button,
-input[type="button"],
-input[type="submit"] {
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.btn {
   position: relative;
-
+  min-height: 54px;
+  padding: 0 25px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
-  min-height: 52px;
-  padding: 0 25px;
-
-  border-radius: 17px !important;
-  border: 1px solid rgba(255,255,255,.55) !important;
-
-  background:
-    linear-gradient(
-      180deg,
-      #39ecff 0%,
-      #14d9f5 42%,
-      #087fbe 100%
-    ) !important;
-
-  color: #fff !important;
-
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.45);
+  text-decoration: none;
   font-weight: 900;
-  letter-spacing: 1.8px;
-
-  text-decoration: none !important;
-
-  box-shadow:
-    0 0 28px rgba(0,255,255,.55),
-    0 0 8px rgba(0,255,255,.22),
-    0 5px 12px rgba(0,0,0,.28);
-
-  text-shadow:
-    0 2px 5px rgba(0,59,85,.67);
-
+  letter-spacing: 1px;
+  color: #fff;
+  overflow: hidden;
   transition:
     transform .18s ease,
     box-shadow .18s ease,
     filter .18s ease;
 }
 
-/* Glass highlight on top of buttons */
-
-button::before,
-.btn::before,
-.button::before,
-a.btn::before,
-a.button::before {
+.btn::before {
   content: "";
   position: absolute;
-
   left: 12px;
   right: 12px;
   top: 5px;
-
   height: 18px;
-
   border-radius: 14px;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,.28),
-      rgba(255,255,255,0)
-    );
-
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,.28),
+    transparent
+  );
   pointer-events: none;
 }
 
-/* Button hover */
-
-button:hover,
-.btn:hover,
-.button:hover,
-a.btn:hover,
-a.button:hover,
-input[type="button"]:hover,
-input[type="submit"]:hover {
-  transform: translateY(-2px);
-
+.btn:hover {
+  transform: translateY(-3px);
   filter: brightness(1.08);
+}
 
+.primary {
+  background: linear-gradient(
+    180deg,
+    var(--cyan-bright),
+    #14d9f5 42%,
+    var(--cyan-deep)
+  );
+  color: #fff;
   box-shadow:
-    0 0 38px rgba(0,255,255,.72),
-    0 0 14px rgba(0,255,255,.32),
-    0 7px 16px rgba(0,0,0,.32);
-}
-
-/* Button press */
-
-button:active,
-.btn:active,
-.button:active,
-a.btn:active,
-a.button:active,
-input[type="button"]:active,
-input[type="submit"]:active {
-  transform: translateY(1px);
-  filter: brightness(.96);
-}
-
-/* ---------- Secondary buttons ---------- */
-
-.btn-secondary,
-.button-secondary,
-.secondary,
-.outline-button,
-a.secondary-button {
-  background: rgba(255,255,255,.025) !important;
-
-  border:
-    1px solid rgba(0,255,255,.40) !important;
-
-  box-shadow:
-    0 0 12px rgba(0,255,255,.06),
-    inset 0 0 18px rgba(0,255,255,.025) !important;
-
-  color: #fff !important;
-}
-
-.btn-secondary:hover,
-.button-secondary:hover,
-.secondary:hover,
-.outline-button:hover,
-a.secondary-button:hover {
-  background: rgba(0,255,255,.07) !important;
-
-  border-color:
-    rgba(0,255,255,.75) !important;
-
-  box-shadow:
-    0 0 24px rgba(0,255,255,.20),
-    inset 0 0 18px rgba(0,255,255,.04) !important;
-}
-
-/* ---------- Pink action buttons ---------- */
-
-.btn-pink,
-.button-pink,
-.pink-button {
-  background:
-    linear-gradient(
-      180deg,
-      #ff4ac8 0%,
-      #ff19b8 45%,
-      #a80073 100%
-    ) !important;
-
-  border-color:
-    rgba(255,255,255,.55) !important;
-
-  box-shadow:
-    0 0 28px rgba(255,0,170,.48),
-    0 0 10px rgba(255,0,170,.22) !important;
-}
-
-.btn-pink:hover,
-.button-pink:hover,
-.pink-button:hover {
-  box-shadow:
-    0 0 40px rgba(255,0,170,.70),
-    0 0 15px rgba(255,0,170,.30) !important;
-}
-
-/* ---------- Navigation ---------- */
-
-nav a,
-nav button {
-  border-radius: 14px !important;
-  color: #fff !important;
-  transition: .2s ease;
-}
-
-nav a:hover,
-nav button:hover {
-  color: var(--nb-cyan) !important;
-  background: rgba(0,255,255,.05) !important;
-  box-shadow: 0 0 18px rgba(0,255,255,.10);
-}
-
-/* ---------- Download / Play CTA ---------- */
-
-.download-btn,
-.play-btn,
-.hero-button,
-.primary-button {
-  min-height: 62px !important;
-  border-radius: 20px !important;
-
-  background:
-    linear-gradient(
-      180deg,
-      #39ecff 0%,
-      #14d9f5 42%,
-      #087fbe 100%
-    ) !important;
-
-  box-shadow:
-    0 0 28px rgba(0,255,255,.55),
-    0 0 8px rgba(0,255,255,.22),
-    0 5px 12px rgba(0,0,0,.28) !important;
-
-  font-size: 18px !important;
-  letter-spacing: 3px !important;
-}
-
-/* ---------- Pink accents ---------- */
-
-.highlight,
-.accent,
-.pro,
-.badge,
-.tag {
-  color: var(--nb-pink) !important;
-  text-shadow: 0 0 12px rgba(255,0,170,.75);
-}
-
-/* ---------- Cyan borders ---------- */
-
-.neon-border {
-  border: 1px solid rgba(0,255,255,.40) !important;
-  box-shadow:
-    0 0 20px rgba(0,255,255,.10);
-}
-
-/* ---------- Inputs ---------- */
-
-input,
-textarea,
-select {
-  background: rgba(255,255,255,.035) !important;
-  color: #fff !important;
-
-  border: 1px solid rgba(0,255,255,.22) !important;
-  border-radius: 14px !important;
-
-  outline: none;
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-  border-color: rgba(0,255,255,.65) !important;
-
-  box-shadow:
-    0 0 18px rgba(0,255,255,.15) !important;
-}
-
-/* ---------- Mobile ---------- */
-
-@media (max-width:750px) {
-  button,
-  .btn,
-  .button,
-  a.btn,
-  a.button {
-    min-height: 50px;
-    padding: 0 20px;
-  }
-
-  .download-btn,
-  .play-btn,
-  .hero-button,
-  .primary-button {
-    min-height: 58px !important;
-    font-size: 16px !important;
-  }
-}
-</style>
-
-
-<style id="neonbreaker-game-theme-buttons">
-/* ============================================================
-   NEONBREAKER PRO — GAME UI THEME
-   Buttons / Cards / Navigation / Theme
-   Matches the Flutter game's neon cyan + pink UI
-   ============================================================ */
-
-/* ---------- GLOBAL THEME ---------- */
-
-:root {
-  --nb-cyan: #00ffff;
-  --nb-cyan-bright: #39ecff;
-  --nb-cyan-deep: #087fbe;
-  --nb-pink: #ff19b8;
-  --nb-purple: #8b5cff;
-  --nb-bg: #020208;
-  --nb-panel: rgba(7, 3, 18, .78);
-  --nb-border: rgba(0, 255, 255, .32);
-  --nb-white: #ffffff;
-}
-
-/* ---------- ALL BUTTONS ---------- */
-
-button,
-.btn,
-a.btn,
-input[type="button"],
-input[type="submit"],
-.download-btn,
-.cta,
-.cta-btn,
-.action-btn {
-  position: relative;
-  border-radius: 18px !important;
-  border: 1px solid rgba(255,255,255,.45) !important;
-  background:
-    linear-gradient(
-      180deg,
-      #39ecff 0%,
-      #14d9f5 42%,
-      #087fbe 100%
-    ) !important;
-  color: #ffffff !important;
-  font-weight: 900 !important;
-  letter-spacing: 1.8px;
-  text-shadow:
-    0 2px 5px rgba(0,59,85,.75);
-  box-shadow:
-    0 0 28px rgba(0,255,255,.48),
-    0 0 8px rgba(0,255,255,.25),
+    0 0 28px rgba(0,255,255,.50),
     0 5px 14px rgba(0,0,0,.35);
-  transition:
-    transform .16s ease,
-    box-shadow .16s ease,
-    filter .16s ease;
-  overflow: hidden;
+  text-shadow: 0 2px 5px rgba(0,59,85,.75);
 }
 
-/* Same glossy top highlight as the game's PLAY button */
-
-button::before,
-.btn::before,
-a.btn::before,
-.download-btn::before,
-.cta::before,
-.cta-btn::before,
-.action-btn::before {
-  content: "";
-  position: absolute;
-  left: 12px;
-  right: 12px;
-  top: 5px;
-  height: 18px;
-  border-radius: 14px;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,.28),
-      rgba(255,255,255,0)
-    );
-  pointer-events: none;
-}
-
-/* Hover */
-
-button:hover,
-.btn:hover,
-a.btn:hover,
-.download-btn:hover,
-.cta:hover,
-.cta-btn:hover,
-.action-btn:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.08);
+.primary:hover {
   box-shadow:
-    0 0 38px rgba(0,255,255,.68),
-    0 0 12px rgba(0,255,255,.34),
+    0 0 40px rgba(0,255,255,.70),
     0 7px 18px rgba(0,0,0,.38);
 }
 
-/* Press */
-
-button:active,
-.btn:active,
-a.btn:active,
-.download-btn:active,
-.cta:active,
-.cta-btn:active,
-.action-btn:active {
-  transform: translateY(1px) scale(.985);
-  box-shadow:
-    0 0 20px rgba(0,255,255,.42);
-}
-
-/* ---------- SECONDARY / OUTLINED BUTTONS ---------- */
-
-.secondary,
-.secondary-btn,
-.outline,
-.outline-btn,
-.btn-secondary,
-a.secondary,
-button.secondary,
-nav button {
-  background:
-    rgba(255,255,255,.025) !important;
-  border: 1px solid rgba(0,255,255,.40) !important;
-  color: #ffffff !important;
+.secondary {
+  background: rgba(255,255,255,.025);
+  border-color: rgba(0,255,255,.42);
   box-shadow:
     0 0 16px rgba(0,255,255,.07),
     inset 0 0 18px rgba(0,255,255,.025);
+}
+
+.secondary:hover {
+  border-color: rgba(0,255,255,.78);
+  background: rgba(0,255,255,.075);
+  box-shadow: 0 0 25px rgba(0,255,255,.22);
+}
+
+/* ---------- SECTIONS ---------- */
+
+section {
+  position: relative;
+  width: min(1200px, 100%);
+  margin: auto;
+  padding: 85px 6%;
+}
+
+.section-title {
+  margin: 0 0 15px;
+  text-align: center;
+  color: #fff;
+  font-size: clamp(28px,5vw,38px);
   text-shadow:
-    0 0 8px rgba(0,255,255,.25);
+    0 0 8px rgba(0,255,255,.35),
+    0 0 20px rgba(0,255,255,.15);
 }
 
-.secondary:hover,
-.secondary-btn:hover,
-.outline:hover,
-.outline-btn:hover,
-.btn-secondary:hover,
-a.secondary:hover,
-button.secondary:hover,
-nav button:hover {
-  border-color: rgba(0,255,255,.78) !important;
-  background: rgba(0,255,255,.075) !important;
-  box-shadow:
-    0 0 25px rgba(0,255,255,.25),
-    inset 0 0 18px rgba(0,255,255,.045);
+.section-sub {
+  max-width: 720px;
+  margin: 0 auto 45px;
+  text-align: center;
+  color: var(--muted);
+  line-height: 1.8;
 }
 
-/* ---------- PINK ACTION BUTTONS ---------- */
+/* ---------- FEATURE CARDS ---------- */
 
-.pink,
-.pink-btn,
-.btn-pink,
-.danger,
-.action-pink,
-.cta-pink {
-  background:
-    linear-gradient(
-      180deg,
-      #ff54cf 0%,
-      #ff19b8 45%,
-      #a60078 100%
-    ) !important;
-  border-color: rgba(255,255,255,.48) !important;
-  box-shadow:
-    0 0 28px rgba(255,25,184,.48),
-    0 0 9px rgba(255,25,184,.24),
-    0 5px 14px rgba(0,0,0,.35);
+.features {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(220px,1fr)
+  );
+  gap: 20px;
 }
 
-.pink:hover,
-.pink-btn:hover,
-.btn-pink:hover,
-.danger:hover,
-.action-pink:hover,
-.cta-pink:hover {
-  box-shadow:
-    0 0 40px rgba(255,25,184,.68),
-    0 0 14px rgba(255,25,184,.32),
-    0 7px 18px rgba(0,0,0,.38);
-}
-
-/* ---------- NAVIGATION ---------- */
-
-nav a {
-  color: #ffffff !important;
-  font-weight: 800;
-  letter-spacing: 1px;
-  text-shadow: 0 0 8px rgba(0,255,255,.18);
-  transition: color .16s ease, text-shadow .16s ease;
-}
-
-nav a:hover {
-  color: var(--nb-cyan) !important;
-  text-shadow:
-    0 0 8px rgba(0,255,255,.65),
-    0 0 18px rgba(0,255,255,.25);
-}
-
-/* ---------- PANELS / CARDS ---------- */
-
-.card,
-.feature-card,
-.download-card,
-.info-card,
-.game-card,
-.panel,
-.showcase-card,
-section .card {
+.card {
+  padding: 26px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
   background:
     linear-gradient(
       145deg,
       rgba(17,7,38,.82),
       rgba(4,2,13,.76)
-    ) !important;
-  border: 1px solid rgba(0,255,255,.18) !important;
-  border-radius: 20px !important;
+    );
   box-shadow:
     0 0 24px rgba(0,255,255,.055),
     inset 0 0 26px rgba(255,25,184,.025);
+  transition:
+    transform .2s ease,
+    border-color .2s ease,
+    box-shadow .2s ease;
 }
 
-/* Cards containing important actions */
-
-.card:hover,
-.feature-card:hover,
-.download-card:hover,
-.info-card:hover,
-.game-card:hover,
-.panel:hover {
-  border-color: rgba(0,255,255,.32) !important;
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0,255,255,.35);
   box-shadow:
-    0 0 30px rgba(0,255,255,.10),
+    0 0 30px rgba(0,255,255,.12),
     inset 0 0 30px rgba(255,25,184,.035);
 }
 
-/* ---------- TITLES ---------- */
-
-h1,
-h2 {
-  text-shadow:
-    0 0 8px rgba(255,255,255,.18),
-    0 0 18px rgba(0,255,255,.24),
-    0 0 34px rgba(0,255,255,.12);
-}
-
-h3 {
-  text-shadow:
-    0 0 8px rgba(0,255,255,.20),
-    0 0 18px rgba(0,255,255,.08);
-}
-
-/* ---------- CYAN TEXT ---------- */
-
-.cyan,
-.neon-cyan,
-.highlight {
-  color: var(--nb-cyan) !important;
-  text-shadow:
-    0 0 8px rgba(0,255,255,.55),
-    0 0 18px rgba(0,255,255,.20);
-}
-
-/* ---------- PINK TEXT ---------- */
-
-.pink-text,
-.neon-pink {
-  color: var(--nb-pink) !important;
-  text-shadow:
-    0 0 8px rgba(255,25,184,.55),
-    0 0 18px rgba(255,25,184,.20);
-}
-
-/* ---------- LINKS ---------- */
-
-main a:not(.btn):not(.cta):not(.download-btn),
-section a:not(.btn):not(.cta):not(.download-btn) {
-  color: #8ffcff;
-  transition: color .16s ease, text-shadow .16s ease;
-}
-
-main a:not(.btn):not(.cta):not(.download-btn):hover,
-section a:not(.btn):not(.cta):not(.download-btn):hover {
-  color: #ffffff;
-  text-shadow:
-    0 0 8px rgba(0,255,255,.65);
-}
-
-/* ---------- DOWNLOAD / PLAY AREA ---------- */
-
-.download-btn,
-.play-btn,
-.play-button,
-.primary-btn {
-  min-height: 56px;
-  padding: 0 28px !important;
-  display: inline-flex;
+.card-icon {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 16px;
+  display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 15px;
+  border: 1px solid rgba(0,255,255,.22);
+  background: rgba(0,255,255,.045);
+  font-size: 27px;
+  box-shadow: 0 0 18px rgba(0,255,255,.07);
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+/* ---------- SCREENSHOTS ---------- */
+
+.game-showcase {
+  display: grid;
+  grid-template-columns: 1.25fr .75fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.screens-gallery {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 14px;
+}
+
+.game-shot {
+  position: relative;
+  padding: 6px;
+  border-radius: 20px;
+  border: 1px solid rgba(0,255,255,.22);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(17,7,38,.90),
+      rgba(4,2,13,.88)
+    );
+  box-shadow:
+    0 0 25px rgba(0,255,255,.08),
+    inset 0 0 20px rgba(255,25,184,.03);
+  overflow: hidden;
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.game-shot:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 35px rgba(0,255,255,.18),
+    0 0 12px rgba(255,25,184,.08);
+}
+
+.game-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* ---------- INFO LIST ---------- */
+
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0 0;
+  color: #c8c5d7;
+}
+
+.info-list li {
+  position: relative;
+  margin-bottom: 15px;
+  padding-right: 30px;
+  line-height: 1.7;
+}
+
+.info-list li::before {
+  content: "⚡";
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: var(--cyan);
+  text-shadow: 0 0 10px rgba(0,255,255,.65);
+}
+
+/* ---------- ADS SECTION ---------- */
+
+.ads-panel {
+  max-width: 900px;
+  margin: auto;
+  padding: 35px;
+  text-align: center;
+  border: 1px solid rgba(255,25,184,.20);
+  border-radius: 22px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(17,7,38,.82),
+      rgba(4,2,13,.76)
+    );
+  box-shadow:
+    0 0 25px rgba(255,25,184,.05),
+    inset 0 0 25px rgba(0,255,255,.025);
+}
+
+/* ---------- CTA ---------- */
+
+.cta {
+  text-align: center;
+  padding: 90px 20px 110px;
+}
+
+.cta .section-title {
+  margin-bottom: 25px;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+  position: relative;
+  padding: 35px 20px;
+  text-align: center;
+  border-top: 1px solid rgba(0,255,255,.12);
+  color: #777487;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+footer a {
+  color: var(--cyan);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-shadow: 0 0 10px var(--cyan);
+}
+
+/* ---------- LANGUAGE ---------- */
+
+.en {
+  display: none;
+}
+
+body.english {
+  direction: ltr;
+}
+
+body.english .ar {
+  display: none;
+}
+
+body.english .en {
+  display: block;
+}
+
+body.english .inline-en {
+  display: inline;
+}
+
+body:not(.english) .inline-en {
+  display: none;
+}
+
+body.english .info-list li {
+  padding-right: 0;
+  padding-left: 30px;
+}
+
+body.english .info-list li::before {
+  right: auto;
+  left: 0;
 }
 
 /* ---------- MOBILE ---------- */
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
 
-  button,
-  .btn,
-  a.btn,
-  .download-btn,
-  .cta,
-  .cta-btn,
-  .action-btn {
-    min-height: 52px;
-    border-radius: 17px !important;
-    letter-spacing: 1.4px;
+  nav {
+    padding: 12px 4%;
   }
 
-  .secondary,
-  .secondary-btn,
-  .outline,
-  .outline-btn,
-  .btn-secondary {
-    min-height: 50px;
+  .logo {
+    font-size: 16px;
   }
 
-  .card,
-  .feature-card,
-  .download-card,
-  .info-card,
-  .game-card,
-  .panel {
-    border-radius: 18px !important;
+  .nav-btn {
+    min-height: 40px;
+    padding: 0 12px;
+    font-size: 13px;
+  }
+
+  .hero {
+    padding-top: 105px;
+  }
+
+  .game-showcase {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .screens-gallery {
+    grid-template-columns: repeat(3,1fr);
+  }
+
+  section {
+    padding: 65px 5%;
+  }
+}
+
+@media (max-width: 560px) {
+
+  .app-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 27px;
+  }
+
+  h1 {
+    font-size: clamp(38px,12vw,58px);
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: min(330px,100%);
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .screens-gallery {
+    grid-template-columns: 1fr;
+    max-width: 330px;
+    margin: auto;
+  }
+
+  .game-shot img {
+    width: 100%;
+  }
+
+  .ads-panel {
+    padding: 25px 18px;
   }
 }
 </style>
-
 </head>
 
 <body>
-<div class="neon-game-bg-grid"></div>
-<div class="neon-game-particles"></div>
-<div class="neon-game-bricks"></div>
-<div class="neon-game-balls"></div>
-<div class="neon-game-lines"></div>
 
-<div class="neonbreaker-bg-objects" aria-hidden="true">
+<!-- Background -->
+<div class="neon-grid"></div>
+<div class="neon-particles"></div>
 
-  <!-- Neon bricks -->
-  <span class="brick cyan" style="left:8%;top:11%"></span>
-  <span class="brick pink" style="left:83%;top:13%"></span>
-  <span class="brick pink" style="left:18%;top:31%"></span>
-  <span class="brick cyan" style="left:91%;top:48%"></span>
-  <span class="brick cyan" style="left:7%;top:63%"></span>
-  <span class="brick pink" style="left:87%;top:76%"></span>
-  <span class="brick cyan" style="left:24%;top:89%"></span>
-  <span class="brick pink" style="left:72%;top:91%"></span>
+<div class="neon-decoration" aria-hidden="true">
 
-  <!-- Neon balls -->
-  <span class="ball cyan" style="left:17%;top:20%"></span>
-  <span class="ball pink" style="left:79%;top:22%"></span>
-  <span class="ball pink" style="left:10%;top:43%"></span>
-  <span class="ball cyan" style="left:92%;top:59%"></span>
-  <span class="ball cyan" style="left:21%;top:70%"></span>
-  <span class="ball pink" style="left:78%;top:68%"></span>
-  <span class="ball cyan" style="left:48%;top:91%"></span>
+  <span class="neon-brick cyan" style="left:8%;top:11%"></span>
+  <span class="neon-brick pink" style="left:83%;top:13%"></span>
+  <span class="neon-brick pink" style="left:18%;top:31%"></span>
+  <span class="neon-brick cyan" style="left:91%;top:48%"></span>
+  <span class="neon-brick cyan" style="left:7%;top:63%"></span>
+  <span class="neon-brick pink" style="left:87%;top:76%"></span>
+  <span class="neon-brick cyan" style="left:24%;top:89%"></span>
+  <span class="neon-brick pink" style="left:72%;top:91%"></span>
 
-  <!-- Particle field -->
-  <span class="star cyan" style="left:6%;top:8%"></span>
-  <span class="star big" style="left:29%;top:10%;color:white"></span>
-  <span class="star" style="left:57%;top:8%;color:#ff00aa"></span>
-  <span class="star" style="left:94%;top:9%;color:#00ffff"></span>
-  <span class="star big" style="left:36%;top:19%;color:white"></span>
-  <span class="star" style="left:68%;top:25%;color:#00ffff"></span>
-  <span class="star" style="left:4%;top:35%;color:#ff00aa"></span>
-  <span class="star big" style="left:52%;top:34%;color:white"></span>
-  <span class="star" style="left:74%;top:39%;color:#00ffff"></span>
-  <span class="star" style="left:28%;top:45%;color:#ff00aa"></span>
-  <span class="star big" style="left:61%;top:50%;color:white"></span>
-  <span class="star" style="left:3%;top:54%;color:#00ffff"></span>
-  <span class="star" style="left:38%;top:58%;color:#ff00aa"></span>
-  <span class="star big" style="left:69%;top:62%;color:white"></span>
-  <span class="star" style="left:15%;top:78%;color:#00ffff"></span>
-  <span class="star" style="left:52%;top:76%;color:#ff00aa"></span>
-  <span class="star" style="left:96%;top:83%;color:#00ffff"></span>
-  <span class="star big" style="left:34%;top:86%;color:white"></span>
-  <span class="star" style="left:61%;top:96%;color:#ff00aa"></span>
-  <span class="star" style="left:90%;top:95%;color:#00ffff"></span>
+  <span class="neon-ball cyan" style="left:17%;top:20%"></span>
+  <span class="neon-ball pink" style="left:79%;top:22%"></span>
+  <span class="neon-ball pink" style="left:10%;top:43%"></span>
+  <span class="neon-ball cyan" style="left:92%;top:59%"></span>
+  <span class="neon-ball cyan" style="left:21%;top:70%"></span>
+  <span class="neon-ball pink" style="left:78%;top:68%"></span>
+  <span class="neon-ball cyan" style="left:48%;top:91%"></span>
 
-  <span class="line one"></span>
-  <span class="line two"></span>
+  <span class="neon-line pink" style="left:-7vw;top:30%"></span>
+  <span class="neon-line cyan" style="right:-7vw;bottom:30%"></span>
+
 </div>
 
-
-<div class="neon-bg-decor" aria-hidden="true">
-  <span class="neon-brick b1"></span><span class="neon-brick b2"></span>
-  <span class="neon-brick b3"></span><span class="neon-brick b4"></span>
-  <span class="neon-brick b5"></span><span class="neon-brick b6"></span>
-  <span class="neon-brick b7"></span><span class="neon-brick b8"></span>
-
-  <span class="neon-ball n1"></span><span class="neon-ball n2"></span>
-  <span class="neon-ball n3"></span><span class="neon-ball n4"></span>
-  <span class="neon-ball n5"></span><span class="neon-ball n6"></span>
-  <span class="neon-ball n7"></span>
-
-  <span class="neon-star s1"></span><span class="neon-star s2"></span>
-  <span class="neon-star s3"></span><span class="neon-star s4"></span>
-  <span class="neon-star s5"></span><span class="neon-star s6"></span>
-  <span class="neon-star s7"></span><span class="neon-star s8"></span>
-  <span class="neon-star s9"></span><span class="neon-star s10"></span>
-  <span class="neon-star s11"></span><span class="neon-star s12"></span>
-  <span class="neon-star s13"></span><span class="neon-star s14"></span>
-  <span class="neon-star s15"></span><span class="neon-star s16"></span>
-  <span class="neon-star s17"></span><span class="neon-star s18"></span>
-  <span class="neon-star s19"></span><span class="neon-star s20"></span>
-
-  <span class="neon-line line1"></span>
-  <span class="neon-line line2"></span>
-</div>
-
-<div class="grid"></div>
-
+<!-- Navigation -->
 <nav>
- <div class="logo">⚡ NEON BREAKER PRO</div>
- <button onclick="toggleLanguage()" id="langBtn">English</button>
+  <div class="logo">⚡ NEON BREAKER PRO</div>
+
+  <div class="nav-actions">
+    <a
+      class="nav-btn"
+      href="https://github.com/Ebrahassad/-Neon-Breaker-Pro./releases/latest"
+      target="_blank"
+      rel="noopener"
+    >
+      <span class="ar">تحميل</span>
+      <span class="en">Download</span>
+    </a>
+
+    <button
+      class="nav-btn"
+      onclick="toggleLanguage()"
+      id="langBtn"
+    >
+      English
+    </button>
+  </div>
 </nav>
 
 <main>
 
+<!-- HERO -->
 <div class="hero">
- <div class="hero-inner">
 
-  <div class="icon"><img src="assets/neonbreaker_icon.png" alt="Neon Breaker Pro"></div>
+  <div class="hero-inner">
 
-  <h1>NEON BREAKER PRO</h1>
+    <div class="app-icon">
+      <img
+        src="assets/neonbreaker_icon.png"
+        alt="Neon Breaker Pro"
+      >
+    </div>
 
-  <p class="subtitle ar">
-   لعبة تحطيم الطوب بأسلوب نيون سريع ومليء بالتحديات.
-   حرّك المضرب، اكسر المربعات، واجمع القدرات الخاصة وحاول تحقيق أعلى نتيجة.
-  </p>
+    <h1>NEON BREAKER PRO</h1>
 
-  <p class="subtitle en">
-   A fast neon brick-breaker experience packed with challenges.
-   Move your paddle, destroy bricks, collect power-ups and chase your highest score.
-  </p>
+    <p class="subtitle ar">
+      لعبة تحطيم الطوب بأسلوب نيون سريع ومليء بالتحديات.
+      حرّك المضرب، اكسر المربعات، اجمع القدرات الخاصة
+      وحاول تحقيق أعلى نتيجة.
+    </p>
 
-  <div class="buttons">
-   <a class="btn primary" href="#features">
-    <span class="ar">اكتشف اللعبة</span>
-    <span class="en">Explore the Game</span>
-   </a>
+    <p class="subtitle en">
+      A fast neon brick-breaker experience packed with challenges.
+      Move your paddle, destroy bricks, collect power-ups
+      and chase your highest score.
+    </p>
 
-   <a class="btn secondary" href="privacy.html">
-    <span class="ar">سياسة الخصوصية</span>
-    <span class="en">Privacy Policy</span>
-   </a>
+    <div class="buttons">
+
+      <a class="btn primary" href="#features">
+        <span class="ar">اكتشف اللعبة</span>
+        <span class="en">Explore the Game</span>
+      </a>
+
+      <a class="btn secondary" href="privacy.html">
+        <span class="ar">سياسة الخصوصية</span>
+        <span class="en">Privacy Policy</span>
+      </a>
+
+    </div>
+
   </div>
 
- </div>
 </div>
 
+<!-- FEATURES -->
 <section id="features">
- <h2 class="section-title">
-  <span class="ar">مميزات اللعبة</span>
-  <span class="en">Game Features</span>
- </h2>
 
- <p class="section-sub">
-  <span class="ar">تجربة نيون مصممة للحركة والسرعة والتحدي.</span>
-  <span class="en">A neon experience built around movement, speed and challenge.</span>
- </p>
+  <h2 class="section-title">
+    <span class="ar">مميزات اللعبة</span>
+    <span class="en">Game Features</span>
+  </h2>
 
- <div class="features">
+  <p class="section-sub">
+    <span class="ar">
+      تجربة نيون مصممة للحركة والسرعة والتحدي.
+    </span>
+    <span class="en">
+      A neon experience built around movement, speed and challenge.
+    </span>
+  </p>
 
-  <div class="card">
-   <div class="card-icon">🧱</div>
-   <h3>Moving Bricks</h3>
-   <p class="ar">مربعات متحركة تضيف المزيد من التحدي وتغيّر مسار اللعب.</p>
-   <p class="en">Moving bricks add an extra layer of challenge and unpredictability.</p>
+  <div class="features">
+
+    <div class="card">
+      <div class="card-icon">🧱</div>
+
+      <h3>
+        <span class="ar">مربعات متحركة</span>
+        <span class="en">Moving Bricks</span>
+      </h3>
+
+      <p class="ar">
+        مربعات متحركة تضيف المزيد من التحدي
+        وتغيّر مسار اللعب.
+      </p>
+
+      <p class="en">
+        Moving bricks add an extra layer of challenge
+        and unpredictability.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🔥</div>
+
+      <h3>
+        <span class="ar">الكرة النارية</span>
+        <span class="en">Fire Ball</span>
+      </h3>
+
+      <p class="ar">
+        قدرات خاصة تمنح الكرة تأثيرات أقوى
+        أثناء اللعب.
+      </p>
+
+      <p class="en">
+        Special abilities give the ball more power
+        during gameplay.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">⚡</div>
+
+      <h3>
+        <span class="ar">مراحل القوة</span>
+        <span class="en">Power Stages</span>
+      </h3>
+
+      <p class="ar">
+        مراحل Power Stage تضيف أحداثًا
+        وتحديات مختلفة.
+      </p>
+
+      <p class="en">
+        Power stages introduce additional events
+        and challenges.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">❤️</div>
+
+      <h3>
+        <span class="ar">حياة إضافية</span>
+        <span class="en">Extra Life</span>
+      </h3>
+
+      <p class="ar">
+        احصل على فرصة إضافية لمواصلة اللعب
+        بعد الخسارة.
+      </p>
+
+      <p class="en">
+        Earn an extra chance to continue playing
+        after a loss.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🎯</div>
+
+      <h3>
+        <span class="ar">مضارب متعددة</span>
+        <span class="en">Multiple Paddles</span>
+      </h3>
+
+      <p class="ar">
+        تحديات تستخدم أكثر من مضرب
+        وتحتاج إلى تحكم أفضل.
+      </p>
+
+      <p class="en">
+        Challenges featuring multiple paddles
+        require sharper control.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">✨</div>
+
+      <h3>
+        <span class="ar">تجربة نيون</span>
+        <span class="en">Neon Gameplay</span>
+      </h3>
+
+      <p class="ar">
+        ألوان وتأثيرات مضيئة تمنح اللعبة
+        طابعها النيون المميز.
+      </p>
+
+      <p class="en">
+        Glowing colors and effects give the game
+        its distinctive neon identity.
+      </p>
+    </div>
+
   </div>
 
-  <div class="card">
-   <div class="card-icon">🔥</div>
-   <h3>Fire Ball</h3>
-   <p class="ar">قدرات خاصة تمنح الكرة تأثيرات أقوى أثناء اللعب.</p>
-   <p class="en">Special abilities give the ball more power during gameplay.</p>
-  </div>
-
-  <div class="card">
-   <div class="card-icon">⚡</div>
-   <h3>Power Stages</h3>
-   <p class="ar">مراحل Power Stage تضيف أحداثًا وتحديات مختلفة.</p>
-   <p class="en">Power stages introduce additional events and challenges.</p>
-  </div>
-
-  <div class="card">
-   <div class="card-icon">❤️</div>
-   <h3>Extra Life</h3>
-   <p class="ar">احصل على فرصة إضافية لمواصلة اللعب من نقطة الخسارة.</p>
-   <p class="en">Earn an extra chance to continue from your previous loss.</p>
-  </div>
-
-  <div class="card">
-   <div class="card-icon">🎯</div>
-   <h3>Multiple Paddles</h3>
-   <p class="ar">تحديات تستخدم أكثر من مضرب وتحتاج إلى تحكم أفضل.</p>
-   <p class="en">Challenges featuring multiple paddles require sharper control.</p>
-  </div>
-
-  <div class="card">
-   <div class="card-icon">✨</div>
-   <h3>Neon Gameplay</h3>
-   <p class="ar">ألوان وتأثيرات مضيئة تمنح اللعبة طابعًا نيون مميزًا.</p>
-   <p class="en">Glowing colors and effects give the game its distinctive neon identity.</p>
-  </div>
-
- </div>
 </section>
 
+<!-- SCREENSHOTS -->
 <section>
- <div class="game-showcase">
 
-  <div class="screens-gallery">
-   <div class="game-shot">
-    <img src="assets/screenshots/home.jpg" alt="Neon Breaker Pro Home Screen">
-   </div>
-   <div class="game-shot">
-    <img src="assets/screenshots/game.jpg" alt="Neon Breaker Pro Gameplay">
-   </div>
-   <div class="game-shot">
-    <img src="assets/screenshots/livel.jpg" alt="Neon Breaker Pro Lives Screen">
-   </div>
+  <div class="game-showcase">
+
+    <div class="screens-gallery">
+
+      <div class="game-shot">
+        <img
+          src="assets/screenshots/home.jpg"
+          alt="Neon Breaker Pro Home Screen"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="game-shot">
+        <img
+          src="assets/screenshots/game.jpg"
+          alt="Neon Breaker Pro Gameplay"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="game-shot">
+        <img
+          src="assets/screenshots/livel.jpg"
+          alt="Neon Breaker Pro Lives Screen"
+          loading="lazy"
+        >
+      </div>
+
+    </div>
+
+    <div>
+
+      <h2 class="section-title" style="text-align:start">
+
+        <span class="ar">اكسر الحدود</span>
+        <span class="en">Break Beyond Limits</span>
+
+      </h2>
+
+      <ul class="info-list">
+
+        <li class="ar">تحكم سريع وسلس بالمضرب</li>
+        <li class="en">Fast and responsive paddle control</li>
+
+        <li class="ar">تحديات ومراحل متعددة</li>
+        <li class="en">Multiple stages and challenges</li>
+
+        <li class="ar">قدرات خاصة أثناء اللعب</li>
+        <li class="en">Special gameplay abilities</li>
+
+        <li class="ar">نظام أرواح وفرصة حياة إضافية</li>
+        <li class="en">Lives system with Extra Life</li>
+
+        <li class="ar">تصميم نيون متوهج</li>
+        <li class="en">Glowing neon visual style</li>
+
+      </ul>
+
+    </div>
+
   </div>
 
-  <div>
-   <h2 class="section-title" style="text-align:start">
-    <span class="ar">اكسر الحدود</span>
-    <span class="en">Break Beyond Limits</span>
-   </h2>
-
-   <ul class="info-list">
-    <li class="ar">تحكم سريع وسلس بالمضرب</li>
-    <li class="en">Fast and responsive paddle control</li>
-
-    <li class="ar">تحديات ومراحل متعددة</li>
-    <li class="en">Multiple stages and challenges</li>
-
-    <li class="ar">قدرات خاصة أثناء اللعب</li>
-    <li class="en">Special gameplay abilities</li>
-
-    <li class="ar">نظام أرواح وفرصة Extra Life</li>
-    <li class="en">Lives system with Extra Life</li>
-
-    <li class="ar">تصميم نيون متوهج</li>
-    <li class="en">Glowing neon visual style</li>
-   </ul>
-  </div>
-
- </div>
 </section>
 
+<!-- UNITY ADS -->
 <section>
- <h2 class="section-title">
-  <span class="ar">إعلانات Unity Ads</span>
-  <span class="en">Unity Ads</span>
- </h2>
 
- <p class="section-sub">
-  <span class="ar">
-   تستخدم اللعبة Unity Ads لعرض الإعلانات داخل التجربة، بما في ذلك الإعلانات المكافئة التي يمكن أن تمنح اللاعب فرصة إضافية عند توفرها.
-  </span>
-  <span class="en">
-   The game uses Unity Ads to display advertisements, including rewarded ads that may provide an additional gameplay opportunity when available.
-  </span>
- </p>
+  <div class="ads-panel">
+
+    <h2 class="section-title">
+
+      <span class="ar">إعلانات Unity Ads</span>
+      <span class="en">Unity Ads</span>
+
+    </h2>
+
+    <p class="section-sub" style="margin-bottom:0">
+
+      <span class="ar">
+        تستخدم اللعبة Unity Ads لعرض الإعلانات داخل التجربة،
+        بما في ذلك الإعلانات المكافئة التي قد تمنح اللاعب
+        فرصة إضافية عند توفرها.
+      </span>
+
+      <span class="en">
+        The game uses Unity Ads to display advertisements,
+        including rewarded ads that may provide an additional
+        gameplay opportunity when available.
+      </span>
+
+    </p>
+
+  </div>
+
 </section>
 
+<!-- CTA -->
 <div class="cta">
- <h2 class="section-title">
-  <span class="ar">جاهز للتحدي؟</span>
-  <span class="en">Ready for the Challenge?</span>
- </h2>
 
- <div class="buttons">
-  <a class="btn primary" href="https://github.com/Ebrahassad/-Neon-Breaker-Pro./releases/tag/v1.0.0" target="_blank" rel="noopener">
-   <span class="ar">تحميل آخر إصدار</span>
-   <span class="en">Download Latest Release</span>
-  </a>
+  <h2 class="section-title">
 
-  <a class="btn secondary" href="privacy.html">
-   <span class="ar">سياسة الخصوصية</span>
-   <span class="en">Privacy Policy</span>
-  </a>
- </div>
+    <span class="ar">جاهز للتحدي؟</span>
+    <span class="en">Ready for the Challenge?</span>
+
+  </h2>
+
+  <div class="buttons">
+
+    <a
+      class="btn primary"
+      href="https://github.com/Ebrahassad/-Neon-Breaker-Pro./releases/latest"
+      target="_blank"
+      rel="noopener"
+    >
+      <span class="ar">تحميل آخر إصدار</span>
+      <span class="en">Download Latest Release</span>
+    </a>
+
+    <a class="btn secondary" href="privacy.html">
+
+      <span class="ar">سياسة الخصوصية</span>
+      <span class="en">Privacy Policy</span>
+
+    </a>
+
+  </div>
+
 </div>
 
 </main>
 
+<!-- FOOTER -->
 <footer>
- <span class="ar">Neon Breaker Pro © 2026 — تطوير Hassadi</span>
- <span class="en">Neon Breaker Pro © 2026 — Developed by Hassadi</span>
- <br><br>
- <a href="privacy.html">
-  <span class="ar">سياسة الخصوصية</span>
-  <span class="en">Privacy Policy</span>
- </a>
+
+  <span class="ar">
+    Neon Breaker Pro © 2026 — تطوير Hassadi
+  </span>
+
+  <span class="en">
+    Neon Breaker Pro © 2026 — Developed by Hassadi
+  </span>
+
+  <br><br>
+
+  <a href="privacy.html">
+
+    <span class="ar">سياسة الخصوصية</span>
+    <span class="en">Privacy Policy</span>
+
+  </a>
+
 </footer>
 
 <script>
-function toggleLanguage(){
- document.body.classList.toggle("english");
- const english=document.body.classList.contains("english");
- document.documentElement.lang=english?"en":"ar";
- document.documentElement.dir=english?"ltr":"rtl";
- document.getElementById("langBtn").textContent=english?"العربية":"English";
+function toggleLanguage() {
+
+  document.body.classList.toggle("english");
+
+  const english =
+    document.body.classList.contains("english");
+
+  document.documentElement.lang =
+    english ? "en" : "ar";
+
+  document.documentElement.dir =
+    english ? "ltr" : "rtl";
+
+  document.getElementById("langBtn").textContent =
+    english ? "العربية" : "English";
 }
 </script>
 
